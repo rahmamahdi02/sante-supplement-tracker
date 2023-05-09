@@ -12,10 +12,12 @@
   "dependencies": {
     "bootstrap": "^5.2.3",
     "moment": "^2.29.4",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-intersection-observer": "^9.4.3",
     "react-router-dom": "^6.9.0",
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4"
