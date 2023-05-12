@@ -8,7 +8,7 @@ function MyNavBar(props) {
 
   return (
     <>
-    <Navbar data-testid="navbar" bg="dark" variant="dark" sticky="top">
+    <Navbar data-testid="navbar" bg="light" variant="light" sticky="top">
       <Container>
         <Navbar.Brand href="/">
         <img
@@ -22,7 +22,7 @@ function MyNavBar(props) {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            Signed in as: <a href="#login">Cristina Rodriguez</a>
+            Signed in as: <a href="#login">User Name</a>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
