@@ -1,42 +1,36 @@
-import React from 'react'
-import {
-    Button,
-    Container,
-    Header,
-    Icon
-  } from 'semantic-ui-react'
-  import Background from '../assets/hero-background.png'
+import React from 'react';
+import { Container, Grid, Image, Header } from 'semantic-ui-react';
+import HeroImage from '../assets/hero_image.png'
 
-
-
-const Hero = () => { (
-  <div>
-
-
-  <Container text>
-      <Header
-        as='h1'
-        content='Imagine-a-Company'
-        inverted
-        style={{
-          fontWeight: 'normal',
-         
-        }}
-      />
-      <Header
-        as='h2'
-        content='Do whatever you want when you want to.'
-        inverted
-        style={{
-          fontWeight: 'normal',
-        }}
-      />
-      <Button primary size='huge'>  </Button>
-    </Container>
-  
-  
-  </div>
-  
+const Hero = () => {
+  return (
+    <div className="hero-section">
+      <Container>
+        <Grid>
+          <Grid.Row>
+            <Grid.Column mobile={16} computer={8}>
+              <Header as="h1">Welcome to the Hero Section</Header>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec gravida nisi, vitae varius elit. Nulla eu
+                scelerisque lacus, vitae efficitur velit. Curabitur
+                sollicitudin justo vel justo efficitur, at pharetra turpis
+                luctus.
+              </p>
+              <button className="ui primary button">Get Started</button>
+            </Grid.Column>
+            <Grid.Column mobile={16} computer={8}>
+              <Image
+                src={HeroImage}
+                alt="Hero Image"
+                size="large"
+                rounded
+              />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
+    </div>
   );
 };
 
