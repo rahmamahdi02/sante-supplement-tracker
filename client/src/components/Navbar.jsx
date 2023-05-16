@@ -8,7 +8,7 @@ function MyNavBar(props) {
 
   return (
     <>
-    <Navbar data-testid="navbar" bg="dark" variant="light" sticky="top">
+    <Navbar data-testid="navbar" bg="light" variant="light" sticky="top">
       <Container>
         <Navbar.Brand href="/">
         <img
