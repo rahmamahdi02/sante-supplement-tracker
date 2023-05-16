@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Grid, Image, Header } from 'semantic-ui-react';
+import Blob from '../assets/hero_blob.png'
 
 const Hero = () => {
   return (
@@ -7,7 +8,7 @@ const Hero = () => {
       <Container style={{ padding: '8em 0em' }} >
         <Grid>
           <Grid.Row>
-            <Grid.Column mobile={16} computer={8}>
+            <Grid.Column floated='right' width={8} verticalAlign="bottom">
               <Header as="h1">Welcome to the Hero Section</Header>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -18,9 +19,9 @@ const Hero = () => {
               </p>
               <button className="ui primary button">Get Started</button>
             </Grid.Column>
-            <Grid.Column mobile={16} computer={8}>
+            <Grid.Column  floated='left' width={6}>
               <Image
-                src="/path/to/your/image.jpg"
+                src={Blob}
                 alt="Hero Image"
                 size="large"
                 rounded
