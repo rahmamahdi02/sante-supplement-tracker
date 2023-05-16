@@ -17,7 +17,7 @@ function App() {
 
       
 
-    <Button color = "red" >Standard</Button>
+      <Button color = "red" >Standard</Button>
 
  {/* <HomepageLayout/> */}
 
