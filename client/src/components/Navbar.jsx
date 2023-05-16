@@ -8,11 +8,11 @@ function MyNavBar(props) {
 
   return (
     <>
-    <Navbar data-testid="navbar" bg="light" variant="light" sticky="top">
+    <Navbar data-testid="navbar" bg="dark" variant="light" sticky="top">
       <Container>
         <Navbar.Brand href="/">
         <img
-              src={Logo}
+              // src={Logo}
               height="30"
               className="d-lg-inline-block"
               alt="React Bootstrap logo"

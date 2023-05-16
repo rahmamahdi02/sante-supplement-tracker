@@ -15,7 +15,7 @@ a.navbar-brand {
 }
 
 .nav-link {
-  color: rgb(51, 51, 52) !important;
+  color: rgb(255, 255, 255) !important;
   margin-left: 5em;
 }
 
@@ -74,5 +74,21 @@ button.btn.btn-primary {
 
 
 .hero-content {
-  background-color: bisque;
+  background-color: rgb(62, 62, 73);
+  background-size: cover;
+  background-position: center;
+  width: 1920px;
+  height: 740px;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+
+h1 {
+
+  color: rgb(242, 244, 242);
+  flex-direction: center
+  ;
+
 }
