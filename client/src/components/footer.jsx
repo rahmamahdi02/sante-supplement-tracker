@@ -1,18 +1,19 @@
 import React from 'react'
 import {
-    Button,
+    
     Container,
-    Divider,
     Grid,
     Header,
-    Image,
+   
+    List,
     Segment,
   } from 'semantic-ui-react'
 
-  const footer = () => {
+  const Footer = () => {
 
 
-    return (
+return (
+
     <div>
 
 <Segment inverted vertical style={{ padding: '5em 0em' }}>
@@ -49,8 +50,10 @@ import {
         </Grid>
       </Container>
     </Segment>
+
 </div>
+
   );
 };
 
-export default footer;
+export default Footer;
