@@ -1,29 +1,15 @@
-import React from 'react'
-import { Grid, Image } from 'semantic-ui-react'
+import React from 'react';
 
-const Hero = () => (
-  <Grid columns={3}>
-    <Grid.Row>
-      <Grid.Column>
-        <Image src='/images/wireframe/paragraph.png' />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src='/images/wireframe/paragraph.png' />
-      </Grid.Column>
-    </Grid.Row>
+const Hero = () => {
+  return (
+    <section className="hero" style={{ backgroundImage: 'url(path/to/image.jpg)' }}>
+      <div className="hero-content">
+        <h1>Welcome to My Website</h1>
+        <p>Explore and discover amazing things.</p>
+        <a href="https://www.example.com" className="hero-button">Get Started</a>
+      </div>
+    </section>
+  );
+};
 
-    <Grid.Row>
-      <Grid.Column>
-        <Image src='/images/wireframe/paragraph.png' />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src='/images/wireframe/paragraph.png' />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src='/images/wireframe/paragraph.png' />
-      </Grid.Column>
-    </Grid.Row>
-  </Grid>
-)
-
-export default Hero
+export default Hero;
