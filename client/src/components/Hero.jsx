@@ -1,42 +1,42 @@
-import React from 'react';
-import Logo from '../assets/santelogo.png'
+import React from 'react'
+import {
+    Button,
+    Container,
+    Header,
+    Icon
+  } from 'semantic-ui-react'
+  import Background from '../assets/hero-background.png'
 
-const Hero = () => {
-  const sectionStyle = {
-    backgroundImage: '../assets/hero-background.png',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    width: '1920px',
-    height: '740px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-end'
-  };
 
-  const contentStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-    height: '100%'
-  };
 
-  const textStyle = {
-    textAlign: 'center'
-  };
+const Hero = () => { (
+  <div>
 
-  const headingStyle = {
-    color: 'white',
-    fontSize: '36px'
-  };
 
-  return (
-    <div className="hero" style={sectionStyle}>
-      <div className="hero-content" style={contentStyle}>
-        <div className="hero-text" style={textStyle}>
-          <h1 style={headingStyle}>Welcome to My Website</h1>
-        </div>
-      </div>
-    </div>
+  <Container text>
+      <Header
+        as='h1'
+        content='Imagine-a-Company'
+        inverted
+        style={{
+          fontWeight: 'normal',
+         
+        }}
+      />
+      <Header
+        as='h2'
+        content='Do whatever you want when you want to.'
+        inverted
+        style={{
+          fontWeight: 'normal',
+        }}
+      />
+      <Button primary size='huge'>  </Button>
+    </Container>
+  
+  
+  </div>
+  
   );
 };
 

@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import MyNavBar from './components/Navbar'
 import ListStudents from './components/ListStudents'
 import HomepageLayout from './components/HomepageLayout'
-import Homepage from './components/Homepage'
+// import Homepage from './components/Homepage'
 import Hero from  './components/Hero'
 import About from './components/about'
 import Footer from './components/footer';
@@ -18,9 +18,10 @@ function App() {
 
          <Hero />
 
-           < About />
+         {/* < Homepage /> */}
 
-         < Homepage />
+
+           < About />
 
         <ListStudents />
       

@@ -35,7 +35,7 @@ import {
       </p>
     </Grid.Column>
     <Grid.Column floated='right' width={6}>
-      <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+      <Image bordered rounded size='large' src='https://i.pinimg.com/564x/38/2c/73/382c736a597e0f58013e43fb50f14fea.jpg' />
     </Grid.Column>
   </Grid.Row>
   <Grid.Row>
