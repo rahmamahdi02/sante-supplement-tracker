@@ -8,8 +8,8 @@ const Hero = () => {
       <Container style={{ padding: '8em 0em' }} >
         <Grid>
           <Grid.Row>
-            <Grid.Column floated='right' width={8} verticalAlign="bottom">
-              <Header as="h1">Welcome to the Hero Section</Header>
+            <Grid.Column floated='right' width={8} verticalAlign="bottom" >
+              <Header as="h1" style={{ fontSize: '2em' }}>Welcome to the Hero Section</Header>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus nec gravida nisi, vitae varius elit. Nulla eu
