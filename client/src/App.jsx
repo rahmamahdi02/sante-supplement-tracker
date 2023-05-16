@@ -13,17 +13,18 @@ function App() {
 
   return (
     <div className="App">
+
       <MyNavBar />
 
-      <Hero />
+         <Hero />
 
-      < About />
+           < About />
 
-< Homepage />
+         < Homepage />
 
-      <ListStudents />
+        <ListStudents />
       
-<Footer />
+      <Footer />
 
 {/* Sample Semantic UI Components */}
  {/* <HomepageLayout/> */}
