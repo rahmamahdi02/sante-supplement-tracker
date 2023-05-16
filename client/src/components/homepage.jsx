@@ -7,6 +7,9 @@ import {
     Header,
   } from 'semantic-ui-react'
 
+
+  // Parent Component for Homepage Child Components
+
   const Homepage = () => {
 
 
@@ -33,6 +36,7 @@ return (
       }}
     />
     <Button primary size='huge'>  </Button>
+
   </Container>
 
 

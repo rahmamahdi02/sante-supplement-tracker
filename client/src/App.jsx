@@ -18,7 +18,7 @@ function App() {
 
          <Hero />
 
-         {/* < Homepage /> */}
+         < Homepage />
 
 
            < About />
