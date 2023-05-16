@@ -1,39 +1,56 @@
 import React from 'react';
-import { Container, Grid, Header, List } from 'semantic-ui-react';
+import {
+  Button,
+  Container,
+  Divider,
+  Grid,
+  Header,
+  Icon,
+  Image,
+  List,
+  Menu,
+  Segment,
+  Sidebar,
+} from 'semantic-ui-react'
 
 const footer = () => {
   return (
-    <div style={{ background: 'orange', padding: '2em 0' }}>
-      <Container>
-        <Grid divided inverted stackable>
+    <div>
+          <Segment inverted vertical style={{ padding: '8em 0em' }}>
+          <Container>
+
+          <Grid divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={3}>
-              <Header inverted>About</Header>
-              <List inverted link>
-                <List.Item as='a'>Company</List.Item>
-                <List.Item as='a'>Team</List.Item>
-                <List.Item as='a'>Careers</List.Item>
+              <Header inverted as='h4' content='About' />
+              <List link inverted>
+                <List.Item as='a'>Sitemap</List.Item>
+                <List.Item as='a'>Contact Us</List.Item>
+                <List.Item as='a'>Religious Ceremonies</List.Item>
+                <List.Item as='a'>Gazebo Plans</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={3}>
-              <Header inverted>Products</Header>
-              <List inverted link>
-                <List.Item as='a'>Product 1</List.Item>
-                <List.Item as='a'>Product 2</List.Item>
-                <List.Item as='a'>Product 3</List.Item>
+              <Header inverted as='h4' content='Services' />
+              <List link inverted>
+                <List.Item as='a'>Banana Pre-Order</List.Item>
+                <List.Item as='a'>DNA FAQ</List.Item>
+                <List.Item as='a'>How To Access</List.Item>
+                <List.Item as='a'>Favorite X-Men</List.Item>
               </List>
             </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted>Contact</Header>
-              <List inverted link>
-                <List.Item as='a'>Email</List.Item>
-                <List.Item as='a'>Phone</List.Item>
-                <List.Item as='a'>Address</List.Item>
-              </List>
+            <Grid.Column width={7}>
+              <Header as='h4' inverted>
+                Footer Header
+              </Header>
+              <p>
+                Extra space for a call to action inside the footer that could help re-engage users.
+              </p>
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Container>
+    </Segment>
     </div>
 
   );
