@@ -12,7 +12,7 @@ function MyNavBar(props) {
       <Container>
         <Navbar.Brand href="/">
         <img
-              // src={Logo}
+              src={Logo}
               height="30"
               className="d-lg-inline-block"
               alt="React Bootstrap logo"

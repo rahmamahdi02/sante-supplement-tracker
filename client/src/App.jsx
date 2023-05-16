@@ -6,7 +6,7 @@ import HomepageLayout from './components/HomepageLayout'
 import Homepage from './components/Homepage'
 import Hero from  './components/Hero'
 import About from './components/about'
-// import Footer from './components/footer'
+import Footer from './components/footer';
 import { Button } from 'semantic-ui-react'
 
 function App() {
@@ -23,10 +23,9 @@ function App() {
 
       <ListStudents />
       
-{/* <Footer /> */}
+<Footer />
 
 {/* Sample Semantic UI Components */}
-      <Button color = "red" >Standard</Button>
  {/* <HomepageLayout/> */}
 
     </div>
