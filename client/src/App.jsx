@@ -6,6 +6,8 @@ import HomepageLayout from './components/HomepageLayout'
 // import Homepage from './components/Homepage'
 import Hero from  './components/Hero'
 import About from './components/about'
+import Tracker from  './components/tracker'
+import Calculator from  './components/calculator'
 import Footer from './components/footer';
 import { Button } from 'semantic-ui-react'
 
@@ -22,7 +24,8 @@ function App() {
 
 
            < About />
-
+< Calculator />
+< Tracker /> 
         <ListStudents />
       
       <Footer />
