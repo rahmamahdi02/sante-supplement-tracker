@@ -74,9 +74,8 @@ import {
     Breaking The Grid, Grabs Your Attention
   </Header>
   <p style={{ fontSize: '1.33em' }}>
-    Instead of focusing on content creation and hard work, we have learned how to master the
-    art of doing nothing by providing massive amounts of whitespace and generic content that
-    can seem massive, monolithic and worth your attention.
+  It's important to note that the RDAs are just a starting point. Some people may need more or less of a particular nutrient depending on their individual circumstances, such as their activity level, health status, and dietary preferences. It's always a good idea to talk to your doctor or a registered dietitian to determine your individual nutrient needs.
+
   </p>
   <Button as='a' size='large'>
     Read More

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button, Header, List } from "semantic-ui-react";
+import { Form, Button, Header, Table, Container } from "semantic-ui-react";
 
 const Calculator = () => {
   const [age, setAge] = useState("");
@@ -31,40 +31,51 @@ const Calculator = () => {
   };
 
   return (
-    <div>
-      <Header as="h1">Vitamin Level Calculator</Header>
-      <Form onSubmit={handleSubmit}>
-        <Form.Field required>
-          <label>Age</label>
-          <input
-            type="number"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-          />
-        </Form.Field>
-        <Form.Field required>
-          <label>Sex</label>
-          <select value={sex} onChange={(e) => setSex(e.target.value)}>
-            <option value="">-- Select --</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        </Form.Field>
-        <Button type="submit">Calculate Vitamin Levels</Button>
-      </Form>
-      {Object.keys(vitaminLevels).length !== 0 && (
-        <div>
-          <Header as="h2">Vitamin Levels:</Header>
-          <List textAlign='center'>
-            {Object.keys(vitaminLevels).map((vitamin) => (
-              <List.Item key={vitamin}>
-                <strong>{vitamin}:</strong> {vitaminLevels[vitamin]} mg
-              </List.Item>
-            ))}
-          </List>
-        </div>
-      )}
-    </div>
+    <Container textAlign="center">
+      <div>
+        <Header as="h1">Vitamin Level Calculator</Header>
+        <Form onSubmit={handleSubmit}>
+          <Form.Field required>
+            <label>Age</label>
+            <input
+              type="number"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+            />
+          </Form.Field>
+          <Form.Field required>
+            <label>Sex</label>
+            <select value={sex} onChange={(e) => setSex(e.target.value)}>
+              <option value="">-- Select --</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </Form.Field>
+          <Button type="submit">Calculate Vitamin Levels</Button>
+        </Form>
+        {Object.keys(vitaminLevels).length !== 0 && (
+          <div>
+            <Header as="h2">Vitamin Levels:</Header>
+            <Table celled>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell>Vitamin</Table.HeaderCell>
+                  <Table.HeaderCell>Level (mg)</Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
+              <Table.Body>
+                {Object.keys(vitaminLevels).map((vitamin) => (
+                  <Table.Row key={vitamin}>
+                    <Table.Cell>{vitamin}</Table.Cell>
+                    <Table.Cell>{vitaminLevels[vitamin]}</Table.Cell>
+                  </Table.Row>
+                ))}
+              </Table.Body>
+            </Table>
+          </div>
+        )}
+      </div>
+    </Container>
   );
 };
 
