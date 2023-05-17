@@ -55,7 +55,7 @@ const Calculator = () => {
       {Object.keys(vitaminLevels).length !== 0 && (
         <div>
           <Header as="h2">Vitamin Levels:</Header>
-          <List>
+          <List textAlign='center'>
             {Object.keys(vitaminLevels).map((vitamin) => (
               <List.Item key={vitamin}>
                 <strong>{vitamin}:</strong> {vitaminLevels[vitamin]} mg

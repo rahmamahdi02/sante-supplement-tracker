@@ -40,7 +40,7 @@ import {
   </Grid.Row>
   <Grid.Row>
     <Grid.Column textAlign='center'>
-      <Button size='huge'>Check Them Out</Button>
+      <Button size='huge'>Sign Up Now</Button>
     </Grid.Column>
   </Grid.Row>
 </Grid>
