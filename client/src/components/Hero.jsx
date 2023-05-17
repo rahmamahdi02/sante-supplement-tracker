@@ -5,7 +5,8 @@ import Blob from '../assets/hero_blob.png'
 const Hero = () => {
   return (
     <div className="hero-section">
-      <Container style={{ padding: '8em 0em' }} >
+      {/* removed padding from container, style={{ padding: '5em 0em' }} */}
+      <Container > 
         <Grid>
           <Grid.Row>
             <Grid.Column floated='right' width={8} verticalAlign="bottom" >
