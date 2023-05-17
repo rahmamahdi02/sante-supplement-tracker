@@ -17,7 +17,7 @@ const Hero = () => {
                 sollicitudin justo vel justo efficitur, at pharetra turpis
                 luctus.
               </p>
-              <button className="ui primary button">Get Started</button>
+              {/* <button className="ui primary button">Get Started</button> */}
             </Grid.Column>
             <Grid.Column  floated='left' width={6}>
               <Image
