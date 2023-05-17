@@ -87,11 +87,11 @@ import {
     horizontal
     style={{ margin: '3em 0em', textTransform: 'uppercase' }}
   >
-    <a href='#'>Case Studies</a>
+    <a href='#'>RDA VALUES</a>
   </Divider>
 
   <Header as='h3' style={{ fontSize: '2em' }}>
-    Did We Tell You About Our Bananas?
+    Get Your Personalized RDA Values Below
   </Header>
   <p style={{ fontSize: '1.33em' }}>
     Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
