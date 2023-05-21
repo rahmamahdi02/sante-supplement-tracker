@@ -11,7 +11,9 @@ const FactsheetComponent = () => {
           throw new Error('Request failed with status: ' + response.status);
         }
         const data = await response.json();
-        setFactsheets(data.results);
+        if (data.results) {
+          setFactsheets(data.results);
+        }
       } catch (error) {
         console.error(error);
       }
