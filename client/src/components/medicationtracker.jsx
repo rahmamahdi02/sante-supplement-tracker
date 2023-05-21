@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Table, Input, Icon,  Checkbox } from 'semantic-ui-react';
+import { Table, Input, Checkbox, Button} from 'semantic-ui-react';
 
 const MedicationTable = () => {
   const [medications, setMedications] = useState([]);
@@ -65,7 +65,7 @@ const MedicationTable = () => {
                 </Table.Cell>
               ))}
               <Table.Cell>
-                <button onClick={() => deleteMedication(index)}>Delete</button>
+                <Button onClick={() => deleteMedication(index)} color="red" icon="trash">Delete </Button>
               </Table.Cell>
             </Table.Row>
           ))}
@@ -81,7 +81,7 @@ const MedicationTable = () => {
               />
             </Table.HeaderCell>
             <Table.HeaderCell colSpan="8">
-              <button onClick={handleAddMedication}>Add Medication</button>
+              <Button onClick={handleAddMedication}>Add Medication</Button>
             </Table.HeaderCell>
           </Table.Row>
         </Table.Footer>
