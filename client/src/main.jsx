@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 import 'semantic-ui-css/semantic.min.css'
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,7 +13,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <div>Routes: Hello world!</div>,
   },
 ]);
 

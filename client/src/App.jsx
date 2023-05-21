@@ -35,7 +35,8 @@ function App() {
 < Calculator />
 < Tracker /> 
 < MedicationTable />
-<FactsheetComponent />
+
+{/* <FactsheetComponent /> */}
 
         <ListStudents />
 
