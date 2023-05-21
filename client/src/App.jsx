@@ -6,10 +6,13 @@ import HomepageLayout from './components/HomepageLayout'
 // import Homepage from './components/Homepage'
 import Hero from  './components/Hero'
 import About from './components/about'
-// import Tracker from  './components/tracker'
-// import Calculator from  './components/calculator'
+import Tracker from  './components/tracker'
+import Calculator from  './components/calculator'
 import Footer from './components/footer';
 import { Button } from 'semantic-ui-react'
+import MedicationTable from './components/medicationtracker'
+import SideProfile from './components/profile'
+import Banner from './components/banner'
 
 function App() {
 
@@ -24,9 +27,17 @@ function App() {
 
 
            < About />
-{/* < Calculator />
-< Tracker />  */}
+
+
+           < SideProfile />
+           < Banner />
+
+< Calculator />
+< Tracker /> 
+< MedicationTable />
+
         <ListStudents />
+
       
       <Footer />
 

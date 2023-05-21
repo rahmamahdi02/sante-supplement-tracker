@@ -16,7 +16,7 @@ import {
 const footer = () => {
   return (
     <div >
-          <Segment inverted vertical style={{ background: 'dark', padding: '8em 0em' }}>
+          <Segment inverted vertical style={{ background: 'grey', padding: '8em 0em' }}>
           <Container>
 
           <Grid divided inverted stackable>
