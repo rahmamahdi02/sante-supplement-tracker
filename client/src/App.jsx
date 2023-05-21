@@ -11,6 +11,9 @@ import Calculator from  './components/calculator'
 import Footer from './components/footer';
 import { Button } from 'semantic-ui-react'
 import MedicationTable from './components/medicationtracker'
+import SideProfile from './components/profile'
+
+
 function App() {
 
   return (
@@ -27,6 +30,8 @@ function App() {
 < Calculator />
 < Tracker /> 
 < MedicationTable />
+
+< SideProfile />
         <ListStudents />
 
       
