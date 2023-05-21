@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 
 const FactsheetComponent = () => {
   const [factsheets, setFactsheets] = useState([]);
@@ -7,13 +6,12 @@ const FactsheetComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/?method=factsheet&term=Folic%20Acid', {
-          params: {
-            method: 'factsheet',
-            term: 'Folic Acid'
-          }
-        });
-        setFactsheets(response.data.results);
+        const response = await fetch('https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/?method=factsheet&term=Folic%20Acid');
+        if (!response.ok) {
+          throw new Error('Request failed with status: ' + response.status);
+        }
+        const data = await response.json();
+        setFactsheets(data.results);
       } catch (error) {
         console.error(error);
       }
