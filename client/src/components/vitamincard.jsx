@@ -25,14 +25,15 @@ const FactsheetComponent = () => {
 
   return (
     <div>
-      {factsheets.map(factsheet => (
+      {factsheets.map(factsheets => (
         <div key={factsheet.id} className="card">
           <div className="card-body">
-            <h5 className="card-title">{factsheet.title}</h5>
-            <p className="card-text">{factsheet.url}</p>
+            <h5 className="card-title">{factsheets.link}</h5>
+            <p className="card-text">{factsheets.name}</p>
           </div>
         </div>
       ))}
+      <p> Console.log</p>
     </div>
   );
 };

@@ -20,27 +20,16 @@ function App() {
     <div className="App">
 
       <MyNavBar />
-
          <Hero />
-
          {/* < Homepage /> */}
-
-
            < About />
-
-
            < SideProfile />
            < Banner />
-
 < Calculator />
 < Tracker /> 
 < MedicationTable />
-
-{/* <FactsheetComponent /> */}
-
-        <ListStudents />
-
-      
+<FactsheetComponent />
+        <ListStudents />    
       <Footer />
 
 {/* Sample Semantic UI Components */}
