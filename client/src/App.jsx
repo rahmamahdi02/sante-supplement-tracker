@@ -10,7 +10,7 @@ import Tracker from  './components/tracker'
 import Calculator from  './components/calculator'
 import Footer from './components/footer';
 import { Button } from 'semantic-ui-react'
-
+import MedicationTable from './components/medicationtracker'
 function App() {
 
   return (
@@ -26,7 +26,9 @@ function App() {
            < About />
 < Calculator />
 < Tracker /> 
+< MedicationTable />
         <ListStudents />
+
       
       <Footer />
 

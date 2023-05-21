@@ -14,6 +14,8 @@ const MedicationTable = () => {
     if (newMedication.trim() !== '') {
       setMedications([...medications, newMedication]);
       setNewMedication('');
+      const updatedSchedule = [...schedule, Array(7).fill(false)];
+      setSchedule(updatedSchedule);
     }
   };
 
@@ -21,15 +23,6 @@ const MedicationTable = () => {
     const updatedSchedule = [...schedule];
     updatedSchedule[index][dayIndex] = !updatedSchedule[index][dayIndex];
     setSchedule(updatedSchedule);
-  };
-
-  const createSchedule = () => {
-    const defaultSchedule = [];
-    medications.forEach(() => {
-      const medicationSchedule = Array(7).fill(false);
-      defaultSchedule.push(medicationSchedule);
-    });
-    setSchedule(defaultSchedule);
   };
 
   const deleteMedication = (index) => {
@@ -89,7 +82,6 @@ const MedicationTable = () => {
             </Table.HeaderCell>
             <Table.HeaderCell colSpan="8">
               <button onClick={handleAddMedication}>Add Medication</button>
-              <button onClick={createSchedule}>Create Schedule</button>
             </Table.HeaderCell>
           </Table.Row>
         </Table.Footer>
