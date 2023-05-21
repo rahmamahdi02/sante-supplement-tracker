@@ -8,7 +8,10 @@ const SideProfile = ({ userName, age, weight, bmr }) => {
   const [editedBMR, setEditedBMR] = useState(bmr);
 
   return (
-    <Segment style={{ backgroundColor: 'lightgreen' }}>
+
+    <div className="side-profile-container">
+
+    <Segment style={{ backgroundColor: 'grey' }}>
       <Header as="h3">Side Profile</Header>
       <p>
         <strong>User Name:</strong>
@@ -39,6 +42,7 @@ const SideProfile = ({ userName, age, weight, bmr }) => {
         />
       </p>
     </Segment>
+    </div>
   );
 };
 

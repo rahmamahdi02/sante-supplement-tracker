@@ -12,7 +12,7 @@ import Footer from './components/footer';
 import { Button } from 'semantic-ui-react'
 import MedicationTable from './components/medicationtracker'
 import SideProfile from './components/profile'
-
+import Banner from './components/banner'
 
 function App() {
 
@@ -27,11 +27,15 @@ function App() {
 
 
            < About />
+
+
+           < SideProfile />
+           < Banner />
+
 < Calculator />
 < Tracker /> 
 < MedicationTable />
 
-< SideProfile />
         <ListStudents />
 
       
