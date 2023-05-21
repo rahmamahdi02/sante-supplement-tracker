@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Table, Input, Checkbox } from 'semantic-ui-react';
+import { Table, Input, Icon,  Checkbox } from 'semantic-ui-react';
 
 const MedicationTable = () => {
   const [medications, setMedications] = useState([]);
