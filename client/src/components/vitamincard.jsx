@@ -13,6 +13,7 @@ const FactsheetComponent = () => {
         const data = await response.json();
         if (data.results) {
           setFactsheets(data.results);
+           console.log(data.results);
         }
       } catch (error) {
         console.error(error);
