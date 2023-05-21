@@ -13,32 +13,23 @@ import { Button } from 'semantic-ui-react'
 import MedicationTable from './components/medicationtracker'
 import SideProfile from './components/profile'
 import Banner from './components/banner'
-
+import FactsheetComponent from './components/vitamincard'
 function App() {
 
   return (
     <div className="App">
 
       <MyNavBar />
-
          <Hero />
-
          {/* < Homepage /> */}
-
-
            < About />
-
-
            < SideProfile />
            < Banner />
-
 < Calculator />
 < Tracker /> 
 < MedicationTable />
-
-        <ListStudents />
-
-      
+<FactsheetComponent />
+        <ListStudents />    
       <Footer />
 
 {/* Sample Semantic UI Components */}
