@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Table, Input, Checkbox, Button} from 'semantic-ui-react';
+import { Table, Input, Button, Checkbox } from 'semantic-ui-react';
 
 const MedicationTable = () => {
   const [medications, setMedications] = useState([]);
@@ -25,7 +25,7 @@ const MedicationTable = () => {
     setSchedule(updatedSchedule);
   };
 
-  const deleteMedication = (index) => {
+  const handleDeleteMedication = (index) => {
     const updatedMedications = [...medications];
     updatedMedications.splice(index, 1);
     setMedications(updatedMedications);
@@ -33,6 +33,12 @@ const MedicationTable = () => {
     const updatedSchedule = [...schedule];
     updatedSchedule.splice(index, 1);
     setSchedule(updatedSchedule);
+  };
+
+  const handleEditMedication = (index, newValue) => {
+    const updatedMedications = [...medications];
+    updatedMedications[index] = newValue;
+    setMedications(updatedMedications);
   };
 
   return (
@@ -55,7 +61,12 @@ const MedicationTable = () => {
         <Table.Body>
           {medications.map((medication, index) => (
             <Table.Row key={index}>
-              <Table.Cell>{medication}</Table.Cell>
+              <Table.Cell>
+                <Input
+                  value={medication}
+                  onChange={(e) => handleEditMedication(index, e.target.value)}
+                />
+              </Table.Cell>
               {schedule[index].map((taken, dayIndex) => (
                 <Table.Cell key={dayIndex}>
                   <Checkbox
@@ -65,7 +76,11 @@ const MedicationTable = () => {
                 </Table.Cell>
               ))}
               <Table.Cell>
-                <Button onClick={() => deleteMedication(index)} color="red" icon="trash">Delete </Button>
+                <Button
+                  icon="trash"
+                  color="red"
+                  onClick={() => handleDeleteMedication(index)}
+                />
               </Table.Cell>
             </Table.Row>
           ))}
@@ -81,12 +96,18 @@ const MedicationTable = () => {
               />
             </Table.HeaderCell>
             <Table.HeaderCell colSpan="8">
-              <Button onClick={handleAddMedication}>Add Medication</Button>
+              <Button
+                icon="plus"
+                color="green"
+                onClick={handleAddMedication}
+              />
             </Table.HeaderCell>
           </Table.Row>
         </Table.Footer>
       </Table>
     </div>
+ 
+
   );
 };
 
