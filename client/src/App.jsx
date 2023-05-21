@@ -13,7 +13,7 @@ import { Button } from 'semantic-ui-react'
 import MedicationTable from './components/medicationtracker'
 import SideProfile from './components/profile'
 import Banner from './components/banner'
-
+import FactsheetComponent from './components/vitamincard'
 function App() {
 
   return (
@@ -35,6 +35,7 @@ function App() {
 < Calculator />
 < Tracker /> 
 < MedicationTable />
+<FactsheetComponent />
 
         <ListStudents />
 

@@ -7,7 +7,7 @@ const FactsheetComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/', {
+        const response = await axios.get('https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/?method=factsheet&term=Folic%20Acid', {
           params: {
             method: 'factsheet',
             term: 'Folic Acid'
