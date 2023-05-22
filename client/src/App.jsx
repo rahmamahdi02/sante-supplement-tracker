@@ -8,7 +8,6 @@ import About from './components/about'
 import Tracker from  './components/tracker'
 import Calculator from  './components/calculator'
 import Footer from './components/footer';
-import { Button } from 'semantic-ui-react'
 import MedicationTable from './components/medicationtracker'
 import SideProfile from './components/profile'
 import Banner from './components/banner'
