@@ -1,17 +1,12 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import MyNavBar from './components/Navbar'
-import ListStudents from './components/ListStudents'
 import Hero from  './components/Hero'
 import About from './components/about'
-import Tracker from  './components/tracker'
-import Calculator from  './components/calculator'
 import Footer from './components/footer';
-import MedicationTable from './components/medicationtracker'
-import SideProfile from './components/profile'
 import Banner from './components/banner'
-import FactsheetComponent from './components/vitamincard'
-function App() {
+
+function Homepage() {
 
   return (
     <div className="App">
@@ -19,17 +14,11 @@ function App() {
       <MyNavBar />
          <Hero />
            < About />
-           < SideProfile />
-           < Banner />
-< Calculator />
-< Tracker /> 
-< MedicationTable />
-<FactsheetComponent />
-        <ListStudents />    
+           < Banner />   
       <Footer />
 
     </div>
   )
 }
 
-export default App
+export default Homepage
