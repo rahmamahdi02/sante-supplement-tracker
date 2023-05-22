@@ -3,6 +3,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Logo from '../assets/santelogo.png'
 import { useAuth0 } from '@auth0/auth0-react';
+const { logout, isAuthenticated, user} = useAuth0();
+
 
 function MyNavBar(props) {
 
@@ -26,7 +28,9 @@ function MyNavBar(props) {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            Signed in as: <a href="#login">User Name</a>
+          {!isAuthenticated ? (<button onClick={() => loginWithRedirect()}>Log In</button>) : (<button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+              Log Out
+              </button>)}
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
