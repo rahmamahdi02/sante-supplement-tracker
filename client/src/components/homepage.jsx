@@ -2,7 +2,6 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Hero from  './components/Hero'
 import About from './components/about'
-import Footer from './components/footer';
 import Banner from './components/banner'
 
 function Homepage() {
@@ -13,7 +12,6 @@ function Homepage() {
          <Hero />
            < About />
            < Banner />   
-         <Footer />
 
     </div>
   )
