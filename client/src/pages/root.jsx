@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import MyNavBar from "../components/Navbar";
 import { useAuth0 } from "@auth0/auth0-react";
-import Logo from "../assets/santelogo.jpeg";
+// import Logo from "../assets/santelogo.jpeg";
 
 import Login from "./Login";
 
@@ -23,6 +23,8 @@ const Root = () => {
             className="d-lg-inline-block"
             alt="React Bootstrap logo"
           /> */}
+
+
           <MyNavBar />
           <Outlet />
         </>

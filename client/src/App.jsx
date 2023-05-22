@@ -1,7 +1,7 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MyNavBar  from '../src/routes/Navbar'
-import Home from './routes/Home';
+import MyNavBar  from '../src/pages/Navbar'
+import Home from './pages/Home';
 import ErrorPage from './components/error-page'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import Profile from './components/Profile';

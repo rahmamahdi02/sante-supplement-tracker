@@ -27,7 +27,7 @@ function MyNavBar(props) {
 
         <Nav.Link >Home</Nav.Link>
         <Nav.Link >About</Nav.Link>
-        <Nav.Link >Contact</Nav.Link>
+        <Nav.Link >Sign Up</Nav.Link>
 
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
