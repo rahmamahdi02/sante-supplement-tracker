@@ -8,10 +8,15 @@ import Profile from './components/Profile';
 
 
 const router = createBrowserRouter(
+
   createRoutesFromElements(
+
     <Route path="/" element={<MyNavBar />}>
+
       <Route index element={<Home />} errorElement={<ErrorPage />} />
+
       <Route path="user-profile" element={<Profile/>} />
+
     </Route>
   )
 )
