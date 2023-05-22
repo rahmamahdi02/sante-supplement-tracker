@@ -3,6 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Logo from '../assets/santelogo.png'
 import { useAuth0 } from '@auth0/auth0-react';
+import { Button } from "semantic-ui-react";
 
 
 function MyNavBar(props) {
@@ -29,11 +30,18 @@ function MyNavBar(props) {
 
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-          {!isAuthenticated ? (<button onClick={() => loginWithRedirect()}>Log In</button>) : (<button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-              Log Out
-              </button>)}
-          </Navbar.Text>
+        <Navbar.Text>
+  {!isAuthenticated ? (
+    <button className="ui primary button" onClick={loginWithRedirect}>
+      Log In
+    </button>
+  ) : (
+    <button className="ui secondary button" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+      Log Out
+    </button>
+  )}
+</Navbar.Text>
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
