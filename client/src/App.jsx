@@ -1,42 +1,32 @@
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import MyNavBar from './components/Navbar'
-import ListStudents from './components/ListStudents'
-import HomepageLayout from './components/HomepageLayout'
-// import Homepage from './components/Homepage'
-import Hero from  './components/Hero'
-import About from './components/about'
-import Tracker from  './components/tracker'
-import Calculator from  './components/calculator'
-import Footer from './components/footer';
-import { Button } from 'semantic-ui-react'
-import MedicationTable from './components/medicationtracker'
-import SideProfile from './components/profile'
-import Banner from './components/banner'
-import FactsheetComponent from './components/vitamincard'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
+import MyNavBar from '../src/pages/Navbar'
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import ErrorPage from './components/error-page';
+import Profile from './components/Profile';
+
 function App() {
+  const { isAuthenticated } = useAuth0(); // Get the authentication status
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<MyNavBar />}>
+        {isAuthenticated ? (
+          <Route index element={<Dashboard />} errorElement={<ErrorPage />} />
+        ) : (
+          <Route index element={<Home />} errorElement={<ErrorPage />} />
+        )}
+        <Route path="user-profile" element={<Profile />} />
+      </Route>
+    )
+  );
 
   return (
-    <div className="App">
-
-      <MyNavBar />
-         <Hero />
-         {/* < Homepage /> */}
-           < About />
-           < SideProfile />
-           < Banner />
-< Calculator />
-< Tracker /> 
-< MedicationTable />
-<FactsheetComponent />
-        <ListStudents />    
-      <Footer />
-
-{/* Sample Semantic UI Components */}
- {/* <HomepageLayout/> */}
-
-    </div>
-  )
+    <RouterProvider router={router} />
+  );
 }
 
-export default App
+export default App;
