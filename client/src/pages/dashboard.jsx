@@ -8,10 +8,12 @@ function Dashboard() {
   return (
     
     <div className="Dashboard-Styling">
+
        < Calculator />
        < Tracker /> 
        < MedicationTable />
        <FactsheetComponent />
+
        {/* <ListStudents />     */}
      
 

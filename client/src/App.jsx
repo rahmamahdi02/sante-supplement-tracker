@@ -1,33 +1,32 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MyNavBar  from '../src/pages/Navbar'
-import Home from './pages/Home';
-import ErrorPage from './components/error-page'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
+import MyNavBar from '../src/pages/Navbar'
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import ErrorPage from './components/error-page';
 import Profile from './components/Profile';
 
-
-const router = createBrowserRouter(
-
-  createRoutesFromElements(
-
-    <Route path="/" element={<MyNavBar />}>
-
-      <Route index element={<Home />} errorElement={<ErrorPage />} />
-
-      <Route path="user-profile" element={<Profile/>} />
-
-    </Route>
-  )
-)
-
-
 function App() {
+  const { isAuthenticated } = useAuth0(); // Get the authentication status
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<MyNavBar />}>
+        {isAuthenticated ? (
+          <Route index element={<Dashboard />} errorElement={<ErrorPage />} />
+        ) : (
+          <Route index element={<Home />} errorElement={<ErrorPage />} />
+        )}
+        <Route path="user-profile" element={<Profile />} />
+      </Route>
+    )
+  );
 
   return (
-    
     <RouterProvider router={router} />
-  )
+  );
 }
 
-export default App
+export default App;
