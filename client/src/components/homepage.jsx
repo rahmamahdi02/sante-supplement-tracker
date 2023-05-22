@@ -1,48 +1,35 @@
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import MyNavBar from './components/Navbar'
+import ListStudents from './components/ListStudents'
+import Hero from  './components/Hero'
+import About from './components/about'
+import Tracker from  './components/tracker'
+import Calculator from  './components/calculator'
+import Footer from './components/footer';
+import MedicationTable from './components/medicationtracker'
+import SideProfile from './components/profile'
+import Banner from './components/banner'
+import FactsheetComponent from './components/vitamincard'
+function App() {
 
-import React from 'react'
+  return (
+    <div className="App">
 
-import {
-    Button,
-    Container,
-    Header,
-  } from 'semantic-ui-react'
+      <MyNavBar />
+         <Hero />
+           < About />
+           < SideProfile />
+           < Banner />
+< Calculator />
+< Tracker /> 
+< MedicationTable />
+<FactsheetComponent />
+        <ListStudents />    
+      <Footer />
 
+    </div>
+  )
+}
 
-  // Parent Component for Homepage Child Components
-
-  const Homepage = () => {
-
-
-return (
-    <div>
-
-
-<Container text>
-    <Header
-      as='h1'
-      content='Imagine-a-Company'
-      inverted
-      style={{
-        fontWeight: 'normal',
-       
-      }}
-    />
-    <Header
-      as='h2'
-      content='Do whatever you want when you want to.'
-      inverted
-      style={{
-        fontWeight: 'normal',
-      }}
-    />
-    <Button primary size='huge'>  </Button>
-
-  </Container>
-
-
-</div>
-
-  );
-};
-
-export default Homepage;
+export default App
