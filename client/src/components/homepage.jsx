@@ -1,6 +1,5 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import MyNavBar from './components/Navbar'
 import Hero from  './components/Hero'
 import About from './components/about'
 import Footer from './components/footer';
@@ -11,11 +10,10 @@ function Homepage() {
   return (
     <div className="App">
 
-      <MyNavBar />
          <Hero />
            < About />
            < Banner />   
-      <Footer />
+         <Footer />
 
     </div>
   )
