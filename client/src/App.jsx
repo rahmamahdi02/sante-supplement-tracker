@@ -19,7 +19,6 @@ function App() {
 
       <MyNavBar />
          <Hero />
-         {/* < Homepage /> */}
            < About />
            < SideProfile />
            < Banner />
@@ -29,9 +28,6 @@ function App() {
 <FactsheetComponent />
         <ListStudents />    
       <Footer />
-
-{/* Sample Semantic UI Components */}
- {/* <HomepageLayout/> */}
 
     </div>
   )
