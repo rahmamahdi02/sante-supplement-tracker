@@ -6,12 +6,13 @@ import FactsheetComponent from './components/vitamincard'
 function Dashboard() {
 
   return (
+    
     <div className="Dashboard-Styling">
        < Calculator />
        < Tracker /> 
        < MedicationTable />
        <FactsheetComponent />
-       <ListStudents />    
+       {/* <ListStudents />     */}
      
 
     </div>
