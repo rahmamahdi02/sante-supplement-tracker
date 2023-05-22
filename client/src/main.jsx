@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+import './index.css'
+import 'semantic-ui-css/semantic.min.css'
 import { Auth0Provider } from '@auth0/auth0-react';
 const DOMAIN = import.meta.env.VITE_AUTH0_DOMAIN;
 const CLIENTID = import.meta.env.VITE_AUTH0_CLIENT_ID;
