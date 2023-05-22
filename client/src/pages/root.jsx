@@ -7,7 +7,9 @@ import Login from "./Login";
 
 const Root = () => {
 
+    // loginWithRedirect 
   const { loginWithRedirect, isAuthenticated, isLoading } = useAuth0();
+
   if (isLoading) {
 
     return "Loading";
@@ -16,17 +18,15 @@ const Root = () => {
     <div className="Root-Setup">
       {isAuthenticated ? (
         <>
-       
-
 
         <MyNavBar />
+
         <Outlet />
         </>
       ) : (
         <Login />
       )}
 
-      {/* outlet is a placeholder for all those children */}
     </div>
   );
 };
