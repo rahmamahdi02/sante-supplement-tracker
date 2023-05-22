@@ -24,12 +24,14 @@ function MyNavBar(props) {
               alt="React Bootstrap logo"
             />
         </Navbar.Brand>
+
         <Nav.Link >Home</Nav.Link>
         <Nav.Link >About</Nav.Link>
         <Nav.Link >Contact</Nav.Link>
 
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
+
         <Navbar.Text>
   {!isAuthenticated ? (
     <button className="ui primary button" onClick={loginWithRedirect}>
