@@ -27,7 +27,7 @@ function MyNavBar() {
           <Navbar.Collapse className="justify-content-end">
           
             <Navbar.Text>
-              {!isAuthenticated ? (<button onClick={() => loginWithRedirect()}>Log In</button>) : (<button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+              {!isAuthenticated ? (<button className="ui primary button"  onClick={() => loginWithRedirect()}>Log In</button>) : (<button className="ui primary button"  onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
               Log Out
               </button>)}
 
