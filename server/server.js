@@ -90,12 +90,13 @@ app.get("/api/users", async (req, res) => {
 });
 
 app.get("/api/factsheets", async (req, res) => {
+  let api_key = process.env.API_KEY;
   try {
-    axios.get("https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/?method=factsheet&term=Zinc&api_key=nujFAoE2eACeeoCiPn7LnmNObHc9pbHx1uu5GYXY").then((response) => {
+    axios.get(`https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/?method=factsheet&term=Zinc&api_key=${api_key}`).then((response) => {
       // console.log("response.data: ", response.data.hits[0]._source.factsheets);
       let result =  response.data.hits[0]._source.factsheets; // facsheets is inside source 
       console.log(result);
-      // res.send(result); 
+      res.send(result); 
     });
   } catch (error) {
     console.log("error from catch server.js", error);
