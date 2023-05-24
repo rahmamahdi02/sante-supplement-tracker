@@ -7,9 +7,29 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import ErrorPage from './components/error-page';
 import Profile from './components/Profile';
+import {useState } from 'react';
 
 function App() {
-  const { isAuthenticated } = useAuth0(); // Get the authentication status
+
+  const { isAuthenticated, isLoading, user} = useAuth0();
+  const [userObj, setUserObj] = useState(null);
+
+  const loadprofile = async () => {
+    if (userObj && userObj.email) {
+      //created a function that will get a list of products from a server using the 'fetch'
+      //pass in products as a prop
+      // A function to fetch the list of products that will be load anytime that list change
+      fetch(`/api/user/${userObj.email}`) //changed this for proxy
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(
+            "from the code in the backend from fetch userObj",
+            userObj
+          );
+        });
+    }
+  };
+
 
   const router = createBrowserRouter(
     
@@ -31,3 +51,23 @@ function App() {
 }
 
 export default App;
+
+
+const sendUser = (user) => {
+  //passes state variable to body
+  fetch("/api/user", {
+    //matches the route in the backend
+    //, it sends a POST request to the "/api/user" endpoint with the user data in the request body.
+    //{user:user}, changed this for proxy
+    method: "POST", //post method to add resource to db
+    body: JSON.stringify({ user }), //stringifying the user obj, body is set to a JSON-encoded string containing the user data.
+    headers: {
+      "Content-type": "application/json", //The headers are set to indicate that the content type of the request is JSON.
+    },
+  })
+    .then((response) => response.json()) //we want to get the response convert to json
+    .then((data) => {
+      //get that data and
+      console.log(data);
+    });
+};
