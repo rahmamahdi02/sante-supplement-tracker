@@ -8,8 +8,7 @@ const db = require("./db/db-connection.js");
 const { auth } = require("express-oauth2-jwt-bearer");
 
 //without --save will need to update package.json manually
-const { AuthenticationClient } = require("auth0");
-const { response } = require("express");
+
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -24,13 +23,17 @@ const jwtCheck = auth({
     tokenSigningAlg: 'RS256'
   });
 
+  
 const auth0 = new AuthenticationClient({
   domain: process.env.AUTH0_DOMAIN,
   clientId: process.env.AUTH0_CLIENT_ID,
 });
 
-// enforce on all endpoints
-app.use(jwtCheck);
+
+const { AuthenticationClient } = require("auth0");
+const { response } = require("express");
+
+
 
 
 
@@ -43,7 +46,7 @@ app.get("/", async (req, res) => {
   res.sendFile(path.join(REACT_BUILD_DIR, "index.html"));
 });
 
-//creating endpoiny for a new user to be inserted into the database table called user
+//creating endpoint for a new user to be inserted into the database table called user
 
 app.post("/api/username", async (req, res) => {
   try {
