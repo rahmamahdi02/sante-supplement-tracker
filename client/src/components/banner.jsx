@@ -9,7 +9,7 @@ import {
     Segment,
   } from 'semantic-ui-react'
 
-  const banner = () => {
+  const Bannere = () => {
 
 
     return (
@@ -34,4 +34,4 @@ import {
   );
 };
 
-export default banner;
+export default Banner;
