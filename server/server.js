@@ -1,9 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
+
 require("dotenv").config();
+
 const path = require("path");
 const db = require("./db/db-connection.js");
+const { response } = require("express");
 
 const { auth } = require("express-oauth2-jwt-bearer");
 
@@ -23,15 +26,12 @@ const jwtCheck = auth({
     tokenSigningAlg: 'RS256'
   });
 
-  
+const { AuthenticationClient } = require("auth0");
+
 const auth0 = new AuthenticationClient({
   domain: process.env.AUTH0_DOMAIN,
   clientId: process.env.AUTH0_CLIENT_ID,
 });
-
-
-const { AuthenticationClient } = require("auth0");
-const { response } = require("express");
 
 
 
