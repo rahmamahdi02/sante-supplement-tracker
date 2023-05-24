@@ -6,7 +6,7 @@ export default function ErrorPage() {
 
   return (
     <div id="error-page">
-      <h1>Oops Sante apologizes for the error!</h1>
+      <h1>Oops, My apologizes for the error!</h1>
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
