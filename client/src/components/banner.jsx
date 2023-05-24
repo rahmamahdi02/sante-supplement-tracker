@@ -1,15 +1,15 @@
 import React from 'react'
 import {
-    Button,
-    Container,
-    Divider,
     Grid,
     Header,
     Image,
     Segment,
   } from 'semantic-ui-react'
+  import { useAuth0 } from "@auth0/auth0-react";
+
 
   const Banner = () => {
+    const { user, getAccessTokenSilently } = useAuth0();
 
 
     return (
