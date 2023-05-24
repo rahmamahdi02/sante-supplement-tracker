@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Logo from '../assets/logo_2.png';
+import Logo from '../assets/PROJECTLOGO.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import { Outlet, Link } from "react-router-dom";
 
@@ -13,12 +13,12 @@ function MyNavBar() {
 
   return (
     <>
-      <Navbar data-testid="navbar" bg="light" variant="dark" sticky="top">
+      <Navbar data-testid="navbar" bg="" variant="dark" sticky="top">
         <Container>
           <Navbar.Brand href="/">
             <img
               src={Logo}
-              height="30"
+              height="35"
               className="d-lg-inline-block"
               alt="React Bootstrap logo"
             />
