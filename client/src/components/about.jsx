@@ -8,6 +8,8 @@ import {
     Image,
     Segment,
   } from 'semantic-ui-react'
+  import BlobAnimation from './BlobAnimation';
+
 
   const about = () => {
 
@@ -35,12 +37,12 @@ import {
       </p>
     </Grid.Column>
     <Grid.Column floated='right' width={6}>
-      <Image bordered rounded size='large' src='https://i.pinimg.com/564x/38/2c/73/382c736a597e0f58013e43fb50f14fea.jpg' />
+      {/* <Image bordered rounded size='large' src='https://i.pinimg.com/564x/38/2c/73/382c736a597e0f58013e43fb50f14fea.jpg' /> */}
+      < BlobAnimation />
     </Grid.Column>
   </Grid.Row>
   <Grid.Row>
     <Grid.Column textAlign='center'>
-      <Button size='huge'>Sign Up Now</Button>
     </Grid.Column>
   </Grid.Row>
 </Grid>

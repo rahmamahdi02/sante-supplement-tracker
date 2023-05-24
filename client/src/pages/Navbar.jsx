@@ -1,9 +1,11 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Logo from '../assets/PROJECTLOGO.png';
+import Logo from '../assets/logo_2.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import { Outlet, Link } from "react-router-dom";
+
+
 
 function MyNavBar() {
 
@@ -27,7 +29,7 @@ function MyNavBar() {
           <Navbar.Collapse className="justify-content-end">
           
             <Navbar.Text>
-              {!isAuthenticated ? (<button onClick={() => loginWithRedirect()}>Log In</button>) : (<button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+              {!isAuthenticated ? (<button className="ui primary button" onClick={() => loginWithRedirect()}>Log In</button> ) : (<button className="ui primary button" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
               Log Out
               </button>)}
 
