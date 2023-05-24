@@ -60,7 +60,7 @@ import {
         "I shouldn't have gone with their competitor."
       </Header>
       <p style={{ fontSize: '1.33em' }}>
-        <Image avatar src='/images/avatar/large/nan.jpg' />
+        {/* APPLE: REMOVE OR IMPORT IMAGE <Image avatar src='/images/avatar/large/nan.jpg' /> */}  
         <b>Nan</b> Chief Fun Officer Acme Toys
       </p>
     </Grid.Column>
