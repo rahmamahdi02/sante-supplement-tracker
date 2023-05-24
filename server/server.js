@@ -20,11 +20,11 @@ app.use(express.static(REACT_BUILD_DIR));
 app.use(cors());
 app.use(express.json());
 
-const jwtCheck = auth({
-    audience: 'https://rahmaproject/api',
-    issuerBaseURL: 'https://dev-elk7fx7fv6dpfryd.us.auth0.com/',
-    tokenSigningAlg: 'RS256'
-  });
+// const jwtCheck = auth({
+//     audience: 'https://rahmaproject/api',
+//     issuerBaseURL: 'https://dev-elk7fx7fv6dpfryd.us.auth0.com/',
+//     tokenSigningAlg: 'RS256'
+//   });
 
 const { AuthenticationClient } = require("auth0");
 
@@ -32,8 +32,6 @@ const auth0 = new AuthenticationClient({
   domain: process.env.AUTH0_DOMAIN,
   clientId: process.env.AUTH0_CLIENT_ID,
 });
-
-
 
 
 
@@ -91,8 +89,24 @@ app.get("/api/users", async (req, res) => {
   }
 });
 
+app.get("/api/factsheets", async (req, res) => {
+  try {
+    axios.get("https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/?method=factsheet&term=Zinc&api_key=nujFAoE2eACeeoCiPn7LnmNObHc9pbHx1uu5GYXY").then((response) => {
+      // console.log("response.data: ", response.data.hits[0]._source.factsheets);
+      let result =  response.data.hits[0]._source.factsheets; // facsheets is inside source 
+      console.log(result);
+      // res.send(result); 
+    });
+  } catch (error) {
+    console.log("error from catch server.js", error);
+  }
+});
+
 
 // console.log that your server is up and running
 app.listen(PORT, () => {
   console.log(`Hola, Server listening on ${PORT}`);
 });
+
+
+
