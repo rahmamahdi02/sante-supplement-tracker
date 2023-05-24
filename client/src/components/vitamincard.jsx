@@ -1,41 +1,41 @@
 import React, { useEffect, useState } from 'react';
 
-const FactsheetComponent = () => {
+const Vitamincard = () => {
   const [factsheets, setFactsheets] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/?method=factsheet&term=Folic%20Acid');
-        if (!response.ok) {
-          throw new Error('Request failed with status: ' + response.status);
-        }
-        const data = await response.json();
-        if (data.results) {
-          setFactsheets(data.results);
-           console.log(data.results);
-        }
-      } catch (error) {
-        console.error(error);
+  const fetchData = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/api/factsheets');
+      if (!response.ok) {
+        throw new Error('Request failed with status: ' + response.status);
       }
-    };
+      const data = await response.json();
+      if (data) {
+        setFactsheets(data);
+         console.log(data);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
+  useEffect(() => {
     fetchData();
   }, []);
 
   return (
     <div>
-      {factsheets.map(factsheets => (
-        <div key={factsheet.id} className="card">
+      < p> testing card </p>
+      {factsheets.map((factsheet, index) => (
+        <div key= {index} className="card">
           <div className="card-body">
-            <h5 className="card-title">{factsheets.link}</h5>
-            <p className="card-text">{factsheets.name}</p>
+            <h5 className="card-title">{factsheet.link}</h5>
+            <p className="card-text">{factsheet.name}</p>
           </div>
         </div>
       ))}
-      <p> Console.log</p>
     </div>
   );
 };
 
-export default FactsheetComponent;
+export default Vitamincard;
