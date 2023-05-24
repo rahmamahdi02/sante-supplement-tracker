@@ -12,6 +12,7 @@ function App() {
   const { isAuthenticated } = useAuth0(); // Get the authentication status
 
   const router = createBrowserRouter(
+    
     createRoutesFromElements(
       <Route path="/" element={<MyNavBar />}>
         {isAuthenticated ? (
