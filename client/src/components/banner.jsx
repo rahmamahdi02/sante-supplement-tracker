@@ -9,7 +9,7 @@ import {
     Segment,
   } from 'semantic-ui-react'
 
-  const Bannere = () => {
+  const Banner = () => {
 
 
     return (
