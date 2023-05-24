@@ -1,90 +1,95 @@
-const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
-const path = require('path');
-const db = require('./db/db-connection.js');
+const express = require("express");
+const cors = require("cors");
+const axios = require("axios");
+require("dotenv").config();
+const path = require("path");
+const db = require("./db/db-connection.js");
 
+const { auth } = require("express-oauth2-jwt-bearer");
 
+//without --save will need to update package.json manually
+const { AuthenticationClient } = require("auth0");
+const { response } = require("express");
 const app = express();
 const PORT = process.env.PORT || 8080;
+
+const REACT_BUILD_DIR = path.join(__dirname, "..", "client", "dist");
+app.use(express.static(REACT_BUILD_DIR));
 app.use(cors());
 app.use(express.json());
 
+const jwtCheck = auth({
+    audience: 'https://rahmaproject/api',
+    issuerBaseURL: 'https://dev-elk7fx7fv6dpfryd.us.auth0.com/',
+    tokenSigningAlg: 'RS256'
+  });
+
+const auth0 = new AuthenticationClient({
+  domain: process.env.AUTH0_DOMAIN,
+  clientId: process.env.AUTH0_CLIENT_ID,
+});
+
+// enforce on all endpoints
+app.use(jwtCheck);
+
+
+
 // creates an endpoint for the route "/""
-app.get('/', (req, res) => {
-    res.json({ message: 'Hola, from My template ExpressJS with React-Vite' });
+
+app.get("/", async (req, res) => {
+  // const userProfile = await auth0.getProfile(req.auth.payload);
+  // console.log("user profile:", userProfile);
+
+  res.sendFile(path.join(REACT_BUILD_DIR, "index.html"));
 });
 
-// create the get request for students in the endpoint '/api/students'
-app.get('/api/students', async (req, res) => {
-    try {
-        const { rows: students } = await db.query('SELECT * FROM students');
-        res.send(students);
-    } catch (e) {
-        return res.status(400).json({ e });
+//creating endpoiny for a new user to be inserted into the database table called user
+
+app.post("/api/username", async (req, res) => {
+  try {
+    const userProfile = req.body.username;
+
+ 
+
+    const userEmail = await db.query("SELECT * FROM users WHERE email = $1", [
+      userProfile.email, 
+    ]);
+
+    if (userEmail.rows.length === 0) {
+      const newUser = {
+        first_name: req.body.user.username,
+        email: req.body.user.email,
+      };
+      const result = await db.query(
+        "INSERT INTO users(first_name, email) VALUES ($1,$2) RETURNING *",
+        [newUser.first_name, newUser.email]
+      );
+      console.log("line 67", result.rows[0]);
+      res.json(result.rows[0]);
     }
+  } catch (e) {
+    console.log(e.message);
+    return res.status(400).json({ e });
+  } 
 });
 
-// create the POST request
-app.post('/api/students', async (req, res) => {
-    try {
-        const newStudent = {
-            firstname: req.body.firstname,
-            lastname: req.body.lastname,
-            iscurrent: req.body.iscurrent
-        };
-        //console.log([newStudent.firstname, newStudent.lastname, newStudent.iscurrent]);
-        const result = await db.query(
-            'INSERT INTO students(firstname, lastname, is_current) VALUES($1, $2, $3) RETURNING *',
-            [newStudent.firstname, newStudent.lastname, newStudent.iscurrent],
-        );
-        console.log(result.rows[0]);
-        res.json(result.rows[0]);
+// create the get request for users in the endpoint '/api/users'
+app.get("/api/users", async (req, res) => {
+  try {
+    const object = await db.query("SELECT * FROM users");
+    let users = object.rows;
+    res.send(users);
 
-    } catch (e) {
-        console.log(e);
-        return res.status(400).json({ e });
-    }
-
+    // const { rows: users } = await db.query("SELECT * FROM users"); ^ same thing as above but this is object destructuring
+    // res.send(users);
+    
+  } catch (e) {
+    return res.status(400).json({ e });
+  }
 });
 
-// delete request for students
-app.delete('/api/students/:studentId', async (req, res) => {
-    try {
-        const studentId = req.params.studentId;
-        await db.query('DELETE FROM students WHERE id=$1', [studentId]);
-        console.log("From the delete request-url", studentId);
-        res.status(200).end();
-    } catch (e) {
-        console.log(e);
-        return res.status(400).json({ e });
-
-    }
-});
-
-//A put request - Update a student 
-app.put('/api/students/:studentId', async (req, res) =>{
-    //console.log(req.params);
-    //This will be the id that I want to find in the DB - the student to be updated
-    const studentId = req.params.studentId
-    const updatedStudent = { id: req.body.id, firstname: req.body.firstname, lastname: req.body.lastname, iscurrent: req.body.is_current}
-    console.log("In the server from the url - the student id", studentId);
-    console.log("In the server, from the react - the student to be edited", updatedStudent);
-    // UPDATE students SET lastname = "something" WHERE id="16";
-    const query = `UPDATE students SET firstname=$1, lastname=$2, is_current=$3 WHERE id=${studentId} RETURNING *`;
-    const values = [updatedStudent.firstname, updatedStudent.lastname, updatedStudent.iscurrent];
-    try {
-      const updated = await db.query(query, values);
-      console.log(updated.rows[0]);
-      res.send(updated.rows[0]);
-  
-    }catch(e){
-      console.log(e);
-      return res.status(400).json({e})
-    }
-  })
 
 // console.log that your server is up and running
 app.listen(PORT, () => {
-    console.log(`Hola, Server listening on ${PORT}`);
+  console.log(`Hola, Server listening on ${PORT}`);
 });
