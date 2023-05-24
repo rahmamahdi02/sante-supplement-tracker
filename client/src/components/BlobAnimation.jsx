@@ -4,7 +4,7 @@ const BlobAnimation = () => {
   return (
     <div
       style={{
-        width: '440px',
+        width: '400px',
         height: '440px',
         borderRadius: '10rem',
         background:
