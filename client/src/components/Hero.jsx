@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Grid, Image, Header } from 'semantic-ui-react';
 import Blob from '../assets/hero_blob.png'
+import BlobAnimation from './BlobAnimation';
 
 const Hero = () => {
   return (
@@ -21,12 +22,13 @@ const Hero = () => {
               {/* <button className="ui primary button">Get Started</button> */}
             </Grid.Column>
             <Grid.Column  floated='left' width={6}>
-              <Image
+              {/* <Image
                 src={Blob}
                 alt="Hero Image"
                 size="large"
                 rounded
-              />
+              /> */}
+
             </Grid.Column>
           </Grid.Row>
         </Grid>
