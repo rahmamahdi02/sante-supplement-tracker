@@ -4,10 +4,9 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import { useAuth0 } from "@auth0/auth0-react";
 import MyNavBar from '../src/pages/Navbar'
 import Home from './pages/Home';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/dashboard';
 import ErrorPage from './components/error-page';
 import Profile from './components/Profile';
-import {useState } from 'react';
 
 function App() {
 
