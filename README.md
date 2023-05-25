@@ -5,6 +5,8 @@
 Sante Wellness tacker  <br>
 </h1> -->
 
+<img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/PROJECTLOGO.png" alt="MoMMLogo" >
+
 [![Contributors][contributors-shield]][contributors-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -32,7 +34,7 @@ Sante Wellness tacker  <br>
 
 ## About The Project
 
-<img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/PROJECTLOGO.png" />
+<img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/landingpage_screenshot.png" />
 
 Introducing Santa Wellness, a PERN Stack Application designed to enhance the daily lives of users by empowering them to track daily Supplements and understand their Recommended Daily Intakee (RDI) values for essential Vitamins & Minerals based on age and sex. With Santa Wellness, you can take control of your well-being and make informed decisions to improve your overall health and nutrition.
 
@@ -43,6 +45,7 @@ Educational Resources: Enhancing your knowledge of nutrition is a vital aspect o
 
 Santa Wellness aims to revolutionize your daily life by equipping you with the tools and knowledge needed to track and improve your RDI values effectively. Start your journey to a healthier lifestyle today with Santa Wellness!
 
+
 ### Built With
 
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -52,6 +55,9 @@ Santa Wellness aims to revolutionize your daily life by equipping you with the t
 - ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 - [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 - ![Semantic UI React](https://img.shields.io/badge/Semantic%20UI%20React-%2335BDB2.svg?style=for-the-badge&logo=SemanticUIReact&logoColor=white)
+
+
+<img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/PROJECTLOGO.png" />
 
 <!-- API Reference -->
 
