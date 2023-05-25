@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.3
--- Dumped by pg_dump version 14.2
+-- Dumped from database version 15.2
+-- Dumped by pg_dump version 15.2
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -21,22 +21,31 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: students; Type: TABLE; Schema: public; Owner: -
+-- Name: medication; Type: TABLE; Schema: public; Owner: tpl1122_18
 --
 
-CREATE TABLE public.students (
-    id integer NOT NULL,
-    firstname character varying(255),
-    lastname character varying(255),
-    is_current boolean
+CREATE TABLE public.medication (
+    medication_id integer NOT NULL,
+    user_id integer NOT NULL,
+    medication_name character varying(255) NOT NULL,
+    dosage numeric,
+    monday boolean,
+    tuesday boolean,
+    wednesday boolean,
+    thursday boolean,
+    friday boolean,
+    saturday boolean,
+    sunday boolean
 );
 
 
+ALTER TABLE public.medication OWNER TO tpl1122_18;
+
 --
--- Name: students_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: medication_medication_id_seq; Type: SEQUENCE; Schema: public; Owner: tpl1122_18
 --
 
-CREATE SEQUENCE public.students_id_seq
+CREATE SEQUENCE public.medication_medication_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -45,41 +54,113 @@ CREATE SEQUENCE public.students_id_seq
     CACHE 1;
 
 
---
--- Name: students_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.students_id_seq OWNED BY public.students.id;
-
+ALTER TABLE public.medication_medication_id_seq OWNER TO tpl1122_18;
 
 --
--- Name: students id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: medication_medication_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tpl1122_18
 --
 
-ALTER TABLE ONLY public.students ALTER COLUMN id SET DEFAULT nextval('public.students_id_seq'::regclass);
+ALTER SEQUENCE public.medication_medication_id_seq OWNED BY public.medication.medication_id;
 
 
 --
--- Data for Name: students; Type: TABLE DATA; Schema: public; Owner: -
+-- Name: users; Type: TABLE; Schema: public; Owner: tpl1122_18
 --
 
-COPY public.students (id, firstname, lastname, is_current) FROM stdin;
-\.
+CREATE TABLE public.users (
+    user_id integer NOT NULL,
+    username character varying(255) NOT NULL,
+    email character varying(255) NOT NULL,
+    image character varying(255)
+);
+
+
+ALTER TABLE public.users OWNER TO tpl1122_18;
+
+--
+-- Name: users_user_id_seq; Type: SEQUENCE; Schema: public; Owner: tpl1122_18
+--
+
+CREATE SEQUENCE public.users_user_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.users_user_id_seq OWNER TO tpl1122_18;
+
+--
+-- Name: users_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: tpl1122_18
+--
+
+ALTER SEQUENCE public.users_user_id_seq OWNED BY public.users.user_id;
 
 
 --
--- Name: students_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+-- Name: medication medication_id; Type: DEFAULT; Schema: public; Owner: tpl1122_18
 --
 
-SELECT pg_catalog.setval('public.students_id_seq', 1, false);
+ALTER TABLE ONLY public.medication ALTER COLUMN medication_id SET DEFAULT nextval('public.medication_medication_id_seq'::regclass);
 
 
 --
--- Name: students students_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: users user_id; Type: DEFAULT; Schema: public; Owner: tpl1122_18
 --
 
-ALTER TABLE ONLY public.students
-    ADD CONSTRAINT students_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.users_user_id_seq'::regclass);
+
+
+--
+-- Data for Name: medication; Type: TABLE DATA; Schema: public; Owner: tpl1122_18
+--
+
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: tpl1122_18
+--
+
+
+
+--
+-- Name: medication_medication_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tpl1122_18
+--
+
+SELECT pg_catalog.setval('public.medication_medication_id_seq', 1, false);
+
+
+--
+-- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tpl1122_18
+--
+
+SELECT pg_catalog.setval('public.users_user_id_seq', 1, false);
+
+
+--
+-- Name: medication medication_pkey; Type: CONSTRAINT; Schema: public; Owner: tpl1122_18
+--
+
+ALTER TABLE ONLY public.medication
+    ADD CONSTRAINT medication_pkey PRIMARY KEY (medication_id);
+
+
+--
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: tpl1122_18
+--
+
+ALTER TABLE ONLY public.users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (user_id);
+
+
+--
+-- Name: medication medication_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tpl1122_18
+--
+
+ALTER TABLE ONLY public.medication
+    ADD CONSTRAINT medication_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.users(user_id);
 
 
 --
