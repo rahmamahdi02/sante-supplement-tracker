@@ -9,7 +9,7 @@ const Calculator = () => {
   const [factsheetVitamin, setFactsheetVitamin] = useState(null);
   const [selectedVitamin, setSelectedVitamin] = useState("");
 
-  // need another instance of state to show link to vitamin cell that is being clicked 
+  // need another instance of state for thee selected vitamin for which the factsheet is being shown
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,12 +37,24 @@ const Calculator = () => {
 
   // add buttons in table 
   // onCLick => term for api to DSLD 
+  // how if factsheet is a child of calculator how to send api call?
   
+  // const showFactSheet = (vitamin) => {
+  // //   setFactsheetVitamin(vitamin);
+  // //   setSelectedVitamin(vitamin);
+  // // };
+
+
+  // use if else statement to toggle like with a coin flip 
   const showFactSheet = (vitamin) => {
-    setFactsheetVitamin(vitamin);
-    setSelectedVitamin(vitamin);
+    if (factsheetVitamin === vitamin) {
+      setFactsheetVitamin(null);
+    } else {
+      setFactsheetVitamin(vitamin);
+    }
   };
 
+  
   // here we need to do 2 things, first show the card, secound track the instand of that row button being called
   // so if 2 buttons are shown, 2 fact sheets are shown?
 
@@ -88,7 +100,7 @@ const Calculator = () => {
     {selectedVitamin === vitamin ? (
       <Button onClick={() => setSelectedVitamin("")}>Hide Factsheet</Button>
     ) : (
-      <Button onClick={() => showFactSheet(vitamin)}>Show Factsheet</Button>
+      <Button onClick={() => showFactSheet(vitamin)}>Show Factsheet</Button> // shoutout to ChatGPT for Logic?? Can I through into a Modal?
     )}
   </Table.Cell>
 
