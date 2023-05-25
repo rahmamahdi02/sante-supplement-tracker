@@ -8,6 +8,8 @@ import {
     Image,
     Segment,
   } from 'semantic-ui-react'
+  import BlobAnimation from './BlobAnimation';
+
 
   const about = () => {
 
@@ -15,7 +17,7 @@ import {
     return (
     <div>
 
-<Segment style={{ padding: '8em 0em' }} vertical>
+<Segment style={{ padding: '4em 0em' }} vertical>
 <Grid container stackable verticalAlign='middle'>
   <Grid.Row>
     <Grid.Column width={8}>
@@ -35,12 +37,12 @@ import {
       </p>
     </Grid.Column>
     <Grid.Column floated='right' width={6}>
-      <Image bordered rounded size='large' src='https://i.pinimg.com/564x/38/2c/73/382c736a597e0f58013e43fb50f14fea.jpg' />
+      {/* <Image bordered rounded size='large' src='https://i.pinimg.com/564x/38/2c/73/382c736a597e0f58013e43fb50f14fea.jpg' /> */}
+      < BlobAnimation />
     </Grid.Column>
   </Grid.Row>
   <Grid.Row>
     <Grid.Column textAlign='center'>
-      <Button size='huge'>Sign Up Now</Button>
     </Grid.Column>
   </Grid.Row>
 </Grid>
@@ -60,7 +62,7 @@ import {
         "I shouldn't have gone with their competitor."
       </Header>
       <p style={{ fontSize: '1.33em' }}>
-        <Image avatar src='/images/avatar/large/nan.jpg' />
+        {/* APPLE: REMOVE OR IMPORT IMAGE <Image avatar src='/images/avatar/large/nan.jpg' /> */}  
         <b>Nan</b> Chief Fun Officer Acme Toys
       </p>
     </Grid.Column>

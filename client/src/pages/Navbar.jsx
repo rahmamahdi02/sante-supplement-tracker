@@ -5,18 +5,20 @@ import Logo from '../assets/PROJECTLOGO.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import { Outlet, Link } from "react-router-dom";
 
+
+
 function MyNavBar() {
 
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
   return (
     <>
-      <Navbar data-testid="navbar" bg="light" variant="dark" sticky="top">
+      <Navbar data-testid="navbar" bg="" variant="dark" sticky="top">
         <Container>
           <Navbar.Brand href="/">
             <img
               src={Logo}
-              height="30"
+              height="35"
               className="d-lg-inline-block"
               alt="React Bootstrap logo"
             />
@@ -27,7 +29,7 @@ function MyNavBar() {
           <Navbar.Collapse className="justify-content-end">
           
             <Navbar.Text>
-              {!isAuthenticated ? (<button onClick={() => loginWithRedirect()}>Log In</button>) : (<button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+              {!isAuthenticated ? (<button className=" ui grey basic button" onClick={() => loginWithRedirect()}>Log In</button> ) : (<button className="ui red basic button" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
               Log Out
               </button>)}
 

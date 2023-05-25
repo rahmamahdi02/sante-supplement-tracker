@@ -13,7 +13,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     domain={DOMAIN}
     clientId={CLIENTID}
     authorizationParams={{
-      redirect_uri: window.location.origin,
+      redirect_uri: window.location.origin, 
+      audience:"https://rahmaproject/api",
+      scope:"openid profile email"
     }}
     >
     <App />

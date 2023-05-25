@@ -1,63 +1,92 @@
-import React, { useState } from 'react';
-import { Table, Input, Button } from 'semantic-ui-react';
+import React, { useEffect, useState } from 'react';
 
-const Tracker = () => {
-  const [tasks, setTasks] = useState([]);
-  const [newTask, setNewTask] = useState('');
+function Tracker() {
+  const [medicationData, setMedicationData] = useState([]);
+  const [medicationName, setMedicationName] = useState('');
+  const [dosage, setDosage] = useState('');
 
-  const handleInputChange = (e) => {
-    setNewTask(e.target.value);
-  };
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-  const handleAddTask = () => {
-    if (newTask.trim() !== '') {
-      setTasks([...tasks, newTask]);
-      setNewTask('');
+  const fetchData = async () => {
+    try {
+      const response = await fetch('/api/medicationData'); // Replace with your actual API endpoint
+      const data = await response.json();
+      setMedicationData(data);
+    } catch (error) {
+      console.error('Error fetching medication data:', error);
     }
   };
 
-  const handleDeleteTask = (index) => {
-    const updatedTasks = [...tasks];
-    updatedTasks.splice(index, 1);
-    setTasks(updatedTasks);
+  const handleMedicationSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('/api/medicationData', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          medication_name: medicationName,
+          dosage: dosage,
+        }),
+      });
+
+      if (response.ok) {
+        // Medication added successfully, fetch updated data
+        fetchData();
+        setMedicationName('');
+        setDosage('');
+      } else {
+        console.error('Error adding medication:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error adding medication:', error);
+    }
   };
 
   return (
-    <Table celled>
-      <Table.Header>
-        <Table.Row>
-          <Table.HeaderCell>Task</Table.HeaderCell>
-          <Table.HeaderCell>Action</Table.HeaderCell>
-        </Table.Row>
-      </Table.Header>
-
-      <Table.Body>
-        {tasks.map((task, index) => (
-          <Table.Row key={index}>
-            <Table.Cell>{task}</Table.Cell>
-            <Table.Cell>
-              <Button onClick={() => handleDeleteTask(index)} color="red" icon="trash" />
-            </Table.Cell>
-          </Table.Row>
-        ))}
-      </Table.Body>
-
-      <Table.Footer>
-        <Table.Row>
-          <Table.HeaderCell>
-            <Input
-              placeholder="Enter a task"
-              value={newTask}
-              onChange={handleInputChange}
-            />
-          </Table.HeaderCell>
-          <Table.HeaderCell>
-            <Button onClick={handleAddTask} color="green" icon="plus" />
-          </Table.HeaderCell>
-        </Table.Row>
-      </Table.Footer>
-    </Table>
+    <div>
+      <h2>Medication Data</h2>
+      <form onSubmit={handleMedicationSubmit}>
+        <div>
+          <label htmlFor="medicationName">Medication Name:</label>
+          <input
+            type="text"
+            id="medicationName"
+            value={medicationName}
+            onChange={(e) => setMedicationName(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="dosage">Dosage:</label>
+          <input
+            type="text"
+            id="dosage"
+            value={dosage}
+            onChange={(e) => setDosage(e.target.value)}
+          />
+        </div>
+        <button type="submit">Add Medication</button>
+      </form>
+      {medicationData.map((medication) => (
+        <div key={medication.medication_id}>
+          <h3>{medication.medication_name}</h3>
+          <ul>
+            <li>Monday: {medication.monday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
+            <li>Tuesday: {medication.tuesday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
+            <li>Wednesday: {medication.wednesday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
+            <li>Thursday: {medication.thursday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
+            <li>Friday: {medication.friday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
+            <li>Saturday: {medication.saturday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
+            <li>Sunday: {medication.sunday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
+          </ul>
+        </div>
+      ))}
+    </div>
   );
-};
+}
 
 export default Tracker;

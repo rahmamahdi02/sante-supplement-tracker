@@ -1,36 +1,39 @@
 import React from 'react';
-import { Container, Grid, Image, Header } from 'semantic-ui-react';
+import { Container, Grid, Image, Header, Segment, Button} from 'semantic-ui-react';
 import Blob from '../assets/hero_blob.png'
+import BlobAnimation from './BlobAnimation';
 
 const Hero = () => {
   return (
     <div className="hero-section">
-      {/* removed padding from container, style={{ padding: '5em 0em' }} */}
-      <Container > 
-        <Grid>
-          <Grid.Row>
-            <Grid.Column floated='right' width={8} verticalAlign="bottom" >
-              <Header as="h1" style={{ fontSize: '2em' }}>Welcome to the Hero Section</Header>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec gravida nisi, vitae varius elit. Nulla eu
-                scelerisque lacus, vitae efficitur velit. Curabitur
-                sollicitudin justo vel justo efficitur, at pharetra turpis
-                luctus.
-              </p>
-              {/* <button className="ui primary button">Get Started</button> */}
-            </Grid.Column>
-            <Grid.Column  floated='left' width={6}>
-              <Image
-                src={Blob}
-                alt="Hero Image"
-                size="large"
-                rounded
-              />
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
+
+
+<Segment style={{ padding: '8em 0em' }} vertical>
+<Grid container stackable verticalAlign='middle'>
+  <Grid.Row>
+    <Grid.Column width={8}>
+      <Header as='h1' style={{ fontSize: '4em' }}>
+       Keep Track of Your Daily Vitamins
+      </Header>
+      <p style={{ fontSize: '1.53em' }}>
+      Sante Wellness Tracker generates personalized Recommended Daily Allowance (RDA) for over 20 essential vitamins and minerals.
+      </p>
+      <Button size='huge'>Sign Up Now</Button>
+
+    </Grid.Column>
+    <Grid.Column floated='right' width={6}>
+      <Image bordered rounded size='large' src='https://i.pinimg.com/564x/38/2c/73/382c736a597e0f58013e43fb50f14fea.jpg' />
+    </Grid.Column>
+  </Grid.Row>
+  <Grid.Row>
+    <Grid.Column textAlign='center'>
+      {/* <Button size='huge'>Sign Up Now</Button> */}
+    </Grid.Column>
+  </Grid.Row>
+</Grid>
+</Segment>
+
+
     </div>
   );
 };

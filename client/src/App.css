@@ -1,6 +1,8 @@
 .App {
   min-height: 100vh;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(251, 251, 239);
+  background-color: rgb(251, 251, 239);
+  background-color: rgb(251, 251, 239);
   margin: 5px;
 }
 
@@ -73,7 +75,7 @@ button.btn.btn-primary {
 }
 
 .navbar {
-  padding: 20px; /* Adjust the value as needed */
+  padding: 80px; /* Adjust the value as needed */
 }
  
 .side-profile-container {
@@ -82,3 +84,20 @@ button.btn.btn-primary {
   align-items: flex-start;
 }
 
+
+
+.hero-section {
+  background-color: rgb(251, 251, 239);
+}
+/* 
+
+  width: 440px; 
+  height: 440px; 
+  border-radius: 10rem; 
+  background: radial-gradient(63.44% 82.03% at 55.58% -15.63%, #e6b35a 0%, rgba(90, 221, 230, 0.26) 53.72%, rgba(90, 221, 230, 0) 100%), 
+  linear-gradient(26.62deg, rgba(113, 89, 249, 0.8) 20.64%, rgba(249, 124, 89, 0) 49.82%), 
+  linear-gradient(56.79deg, #39813c 33.79%, rgba(185, 91, 230, 0) 72.67%), 
+  linear-gradient(301.08deg, rgba(252, 178, 91, 0.91) 20.42%, rgba(252, 178, 91, 0) 60.38%),
+   linear-gradient(141.57deg, rgba(81, 167, 54, 0.85) 19.08%, rgba(78, 173, 235, 0) 98.72%, #D3E4FF);
+    background-blend-mode: normal,normal,darken,normal,normal,normal; filter: blur(51px);
+} */
