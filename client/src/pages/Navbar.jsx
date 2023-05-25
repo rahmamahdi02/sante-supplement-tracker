@@ -23,7 +23,7 @@ function MyNavBar() {
               alt="React Bootstrap logo"
             />
           </Navbar.Brand>
-          {!user ? null : <Nav.Link to="/user-profile" as={Link}>{user.name}</Nav.Link>}
+          {/* {!user ? null : <Nav.Link to="/user-profile" as={Link}>{user.name}</Nav.Link>} */}
 
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">

@@ -6,7 +6,7 @@ import MyNavBar from '../src/pages/Navbar'
 import Home from './pages/Home';
 import Dashboard from './pages/dashboard';
 import ErrorPage from './components/error-page';
-import Profile from './components/Profile';
+// import Profile from './components/Profile';
 
 function App() {
 
@@ -42,7 +42,7 @@ function App() {
         ) : (
           <Route index element={<Home />} errorElement={<ErrorPage />} />
         )}
-        <Route path="user-profile" element={<Profile />} />
+        {/* <Route path="user-profile" element={<Profile />} /> */}
         
       </Route>
     )
