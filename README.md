@@ -1,5 +1,5 @@
 
-<img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/project_logo.png" alt="MoMMLogo" >
+<img src=https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/darkbluelogo.png alt="MoMMLogo" >
 
 <!-- TABLE OF CONTENTS -->
 <details>
