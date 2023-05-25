@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Form, Table } from "semantic-ui-react";
+import { Modal, Form, Table, Button} from "semantic-ui-react";
 
 const VitaminB6ModalForm = () => {
   const [age, setAge] = useState("");
@@ -33,7 +33,7 @@ const VitaminB6ModalForm = () => {
 
   return (
     <Modal textAlign="center"
-      trigger={<button onClick={handleModalOpen}>Open Vitamin B6 Calculator</button>}
+      trigger={<Button onClick={handleModalOpen}>Open Vitamin B6 Calculator</Button>}
       open={modalOpen}
       onClose={handleModalClose}
     >
