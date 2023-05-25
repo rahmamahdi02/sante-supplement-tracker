@@ -16,10 +16,10 @@ const Calculator = () => {
 
     if (sex === "female" && age > 18) {
       setVitaminLevels({
-        vitaminA: 5,
-        vitaminC: 5,
-        vitaminD: 5,
-        vitaminE: 5,
+        "vitamin A": 5,
+        "vitamin C": 5,
+        "vitamin D": 5,
+        "vitamin E": 5,
         vitaminK: 5,
         vitaminB1: 5,
         vitaminB2: 5,
@@ -45,7 +45,7 @@ const Calculator = () => {
   // // };
 
 
-  // use if else statement to toggle like with a coin flip 
+  // use if else statement to toggle like with a coin flip
   const showFactSheet = (vitamin) => {
     if (factsheetVitamin === vitamin) {
       setFactsheetVitamin(null);

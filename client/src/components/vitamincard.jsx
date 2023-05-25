@@ -1,15 +1,26 @@
 import React, { useEffect, useState } from 'react';
 
-const Vitamincard = () => {
+const Vitamincard = ({vitamin}) => {
   const [factsheets, setFactsheets] = useState([]);
 
   const fetchData = async () => {
     try {
-      const response = await fetch('/api/factsheets');
+
+      // swapped get request with a post with multiple data, first vitamin term
+      const requestOptions = {
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ "vitamin": vitamin.replace( " ","%") })
+    };
+
+    const response = await fetch('/api/factsheets',requestOptions);
+
+
       if (!response.ok) {
         throw new Error('Request failed with status: ' + response.status);
       }
       const data = await response.json();
+
       if (data) {
         setFactsheets(data);
          console.log(data);

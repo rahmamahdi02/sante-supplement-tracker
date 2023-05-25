@@ -89,19 +89,55 @@ app.get("/api/users", async (req, res) => {
   }
 });
 
-app.get("/api/factsheets", async (req, res) => {
+app.post("/api/factsheets", async (req, res) => {
+  let vitamin = req.body.vitamin; console.log(vitamin);
   let api_key = process.env.API_KEY;
   try {
-    axios.get(`https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/?method=factsheet&term=Zinc&api_key=${api_key}`).then((response) => {
+    axios.get(`https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/?method=factsheet&term=${vitamin}&api_key=${api_key}`).then((response) => {
       // console.log("response.data: ", response.data.hits[0]._source.factsheets);
-      let result =  response.data.hits[0]._source.factsheets; // facsheets is inside source 
+      let result =  response.data.hits;
+
+      let factsheet = []; // define an outer variable to hold the array where factsheets 
+
+      if (result.length){
+
+        for (let i = 0; i < result.length; i++){
+
+          if (result[i]._source.factsheets.length > 0) {
+             
+            factsheet = result[i]._source.factsheets;
+
+          }
+           
+        } 
+        // iterate results facsheets.length= == 0
+        // 
+      }
+      //._source.factsheets; // facsheets is inside source 
       console.log(result);
-      res.send(result); 
+      res.send(factsheet); 
     });
   } catch (error) {
     console.log("error from catch server.js", error);
   }
 });
+
+
+// app.get("/api/factsheets", async (req, res) => {
+//   let api_key = process.env.API_KEY;
+//   try {
+//     const term = req.query.term; // Retrieve the term from the query parameters
+//     axios
+//       .get(`https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/?method=factsheet&term=${term}&api_key=${api_key}`)
+//       .then((response) => {
+//         let result = response.data.hits[0]._source.factsheets;
+//         console.log(result);
+//         res.send(result);
+//       });
+//   } catch (error) {
+//     console.log("error from catch server.js", error);
+//   }
+// });
 
 
 // console.log that your server is up and running
