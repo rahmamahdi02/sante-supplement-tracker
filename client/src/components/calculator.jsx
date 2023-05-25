@@ -20,15 +20,15 @@ const Calculator = () => {
         "vitamin C": 5,
         "vitamin D": 5,
         "vitamin E": 5,
-        vitaminK: 5,
-        vitaminB1: 5,
-        vitaminB2: 5,
-        vitaminB3: 5,
-        vitaminB6: 5,
-        vitaminB12: 5,
-        pantothenicAcid: 5,
-        biotin: 5,
-        folate: 5
+        "vitamin K": 5,
+        "vitamin B1": 5,
+        "vitamin B2": 5,
+        "vitamin B3" : 5,
+        "vitamin B6" : 5,
+        "vitamin B12" : 5,
+        "Pantothenic Acid" : 5,
+        "biotin" : 5,
+        "folate" : 5
       });
     } else {
       setVitaminLevels({});
