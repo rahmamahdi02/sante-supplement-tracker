@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { Form, Button, Header, Table, Container } from "semantic-ui-react";
+import Vitamincard from '../components/vitamincard';
 
 const Calculator = () => {
   const [age, setAge] = useState("");
   const [sex, setSex] = useState("");
   const [vitaminLevels, setVitaminLevels] = useState({});
+  const [factsheetVitamin, setFactsheetVitamin] = useState(null);
+  const [selectedVitamin, setSelectedVitamin] = useState("");
+
+  // need another instance of state to show link to vitamin cell that is being clicked 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,6 +34,17 @@ const Calculator = () => {
       setVitaminLevels({});
     }
   };
+
+  // add buttons in table 
+  // onCLick => term for api to DSLD 
+  
+  const showFactSheet = (vitamin) => {
+    setFactsheetVitamin(vitamin);
+    setSelectedVitamin(vitamin);
+  };
+
+  // here we need to do 2 things, first show the card, secound track the instand of that row button being called
+  // so if 2 buttons are shown, 2 fact sheets are shown?
 
   return (
     <Container textAlign="center">
@@ -65,15 +81,24 @@ const Calculator = () => {
               </Table.Header>
               <Table.Body>
                 {Object.keys(vitaminLevels).map((vitamin) => (
-                  <Table.Row key={vitamin}>
+                  <Table.Row key={vitamin}> 
                     <Table.Cell>{vitamin}</Table.Cell>
                     <Table.Cell>{vitaminLevels[vitamin]}</Table.Cell>
+                    <Table.Cell>
+    {selectedVitamin === vitamin ? (
+      <Button onClick={() => setSelectedVitamin("")}>Hide Factsheet</Button>
+    ) : (
+      <Button onClick={() => showFactSheet(vitamin)}>Show Factsheet</Button>
+    )}
+  </Table.Cell>
+
                   </Table.Row>
                 ))}
               </Table.Body>
             </Table>
           </div>
         )}
+{factsheetVitamin && <Vitamincard vitamin={factsheetVitamin} />}
       </div>
     </Container>
   );
