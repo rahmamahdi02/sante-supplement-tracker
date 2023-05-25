@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Form, Table, Button} from "semantic-ui-react";
+import { Modal, Form, Table, Button, Header, Icon} from "semantic-ui-react";
 
 const VitaminB6ModalForm = () => {
   const [age, setAge] = useState("");
@@ -34,11 +34,12 @@ const VitaminB6ModalForm = () => {
   return (
     <Modal 
       trigger={<Button onClick={handleModalOpen}>Try Vitamin B6 Calculator</Button>}
+      
       open={modalOpen}
       onClose={handleModalClose}
       className="centered-modal"
     >
-      <Modal.Header>Vitamin B6 Level Calculator</Modal.Header>
+      <Header>Vitamin B6 Level Calculator</Header>
       <Modal.Content>
         <Form onSubmit={handleSubmit}>
           <Form.Field required>
@@ -81,6 +82,15 @@ const VitaminB6ModalForm = () => {
           </div>
         )}
       </Modal.Content>
+      <Modal.Actions>
+      <Button color='red' onClick={() => setModalOpen(false)}>
+          <Icon name='remove' /> No
+        </Button>
+        <Button color='green' onClick={() => setModalOpen(false)}>
+          <Icon name='checkmark' /> Yes
+        </Button>
+      </Modal.Actions>
+
     </Modal>
   );
 };
