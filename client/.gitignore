@@ -26,5 +26,6 @@ DS_Store
 *.sln
 *.sw?
 
+.env
 client/.env
 client/dist.env
