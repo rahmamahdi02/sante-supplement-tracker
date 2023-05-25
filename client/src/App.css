@@ -94,6 +94,16 @@ button.btn.btn-primary {
   font-weight: bold;
 }
 
+
+.centered-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
 /* .blob-animation {
   width: 400px;
   height: 220px;
