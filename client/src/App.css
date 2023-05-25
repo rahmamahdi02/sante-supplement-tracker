@@ -90,6 +90,10 @@ button.btn.btn-primary {
   background-color: rgb(251, 251, 239);
 }
 
+.bold-text {
+  font-weight: bold;
+}
+
 /* .blob-animation {
   width: 400px;
   height: 220px;

@@ -41,11 +41,9 @@ const footer = () => {
             </Grid.Column>
             <Grid.Column width={7}>
               <Header as='h4' inverted>
-                Footer Header
-              </Header>
+              Copyright @ 2023 Sante Wellness            </Header>
               <p>
-                Extra space for a call to action inside the footer that could help re-engage users.
-              </p>
+              Developed by Rahma Mahdi, Techtonica H-1 2023 Cohort   </p>
             </Grid.Column>
           </Grid.Row>
         </Grid>

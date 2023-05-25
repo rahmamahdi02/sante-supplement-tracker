@@ -17,19 +17,20 @@ import {
     return (
     <div>
 
-<Segment style={{ padding: '4em 0em' }} vertical>
+<Segment style={{ padding: '6em 0em' }} vertical>
 <Grid container stackable verticalAlign='middle'>
   <Grid.Row>
     <Grid.Column width={8}>
-      <Header as='h3' style={{ fontSize: '2em' }}>
-You Probally Have A Nutrient Gap ...    </Header>
+    
+      <Header as='h3' style={{ fontSize: '2.2em' }}>
+..You Probally Have A Nutrient Gap ..    </Header>
       <p style={{ fontSize: '1.53em' }}>
       Most Americans aren't getting the recommended daily intakes of crucial vitamins and minerals essential for physical & mental health with approximately 85% falling short according to the FDA.      </p>
       <Header as='h3' style={{ fontSize: '2em' }}>
         What our my Recommended Daily Allowance (RDA)?
       </Header>
       <p style={{ fontSize: '1.53em' }}>
-As more Adults, Additionally, over half of Americans over the age of 20, report taking a daily supplement. (NCHS Data Brief 2018
+Half of Americans over the age of 20, report taking a daily supplement. (NCHS Data Brief 2018) Get rid of the confusion about how much Vitamin C, you should be taking by getting easy to understand info taiored to your body.
       </p>
     </Grid.Column>
     <Grid.Column floated='right' width={6}>
@@ -69,16 +70,12 @@ As more Adults, Additionally, over half of Americans over the age of 20, report 
 <Segment style={{ padding: '8em 0em' }} vertical>
 <Container text>
   <Header as='h3' style={{ fontSize: '2em' }}>
-    Breaking The Grid, Grabs Your Attention
-  </Header>
+Consult With Your Healthcare Provider  </Header>
   <p style={{ fontSize: '1.33em' }}>
   It's important to note that the RDAs are just a starting point. Some people may need more or less of a particular nutrient depending on their individual circumstances, such as their activity level, health status, and dietary preferences. It's always a good idea to talk to your doctor or a registered dietitian to determine your individual nutrient needs.
 
   </p>
-  <Button as='a' size='large'>
-    Read More
-  </Button>
-
+ 
   <Divider
     as='h4'
     className='header'
