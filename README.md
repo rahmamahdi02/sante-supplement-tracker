@@ -48,7 +48,7 @@ Santa Wellness aims to revolutionize your daily life by equipping you with the t
 - [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 - ![Semantic UI React](https://img.shields.io/badge/Semantic%20UI%20React-%2335BDB2.svg?style=for-the-badge&logo=SemanticUIReact&logoColor=white)
 
-<img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/landingpage_screenshot.png" />
+<!-- <img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/landingpage_screenshot.png" /> -->
 
 
 <!-- API Reference -->
