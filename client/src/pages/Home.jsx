@@ -1,7 +1,7 @@
 import Hero from  '../components/Hero';
 import About from '../components/about';
 import Footer from '../components/footer';
-
+import VitaminB6Form from '../components/samplecalculator';
 
 const Home = () => {
     
@@ -9,6 +9,8 @@ const Home = () => {
         <div>
             <Hero />
            < About />  
+           <VitaminB6Form />
+          
            <Footer />    
         </div>
     )};

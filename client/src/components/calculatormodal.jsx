@@ -19,7 +19,7 @@ const VitaminB6ModalForm = () => {
     } else if (sex === "male" && age > 50) {
       setVitaminB6Level(1.5);
     } else {
-      setVitaminB6Level(null);
+      setVitaminB6Level("Speak with a Healthcare Professional");
     }
   };
 
@@ -32,10 +32,11 @@ const VitaminB6ModalForm = () => {
   };
 
   return (
-    <Modal textAlign="center"
-      trigger={<Button onClick={handleModalOpen}>Open Vitamin B6 Calculator</Button>}
+    <Modal 
+      trigger={<Button onClick={handleModalOpen}>Try Vitamin B6 Calculator</Button>}
       open={modalOpen}
       onClose={handleModalClose}
+      className="centered-modal"
     >
       <Modal.Header>Vitamin B6 Level Calculator</Modal.Header>
       <Modal.Content>
