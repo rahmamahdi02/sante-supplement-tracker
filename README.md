@@ -1,5 +1,6 @@
 
 <img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/PROJECTLOGO.png" alt="MoMMLogo" >
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -19,10 +20,6 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-[![Contributors][contributors-shield]][contributors-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- ABOUT THE PROJECT -->
 
@@ -96,6 +93,9 @@ Step 5: Start the program!
 ```
 
 <!-- CONTRIBUTING -->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 ## Contributing
 
