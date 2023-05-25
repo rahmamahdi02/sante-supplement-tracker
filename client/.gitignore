@@ -29,3 +29,4 @@ DS_Store
 .env
 client/.env
 client/dist.env
+.env
