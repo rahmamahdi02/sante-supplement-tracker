@@ -9,7 +9,7 @@ import {
     Segment,
   } from 'semantic-ui-react'
   import BlobAnimation from './BlobAnimation';
-
+  import VitaminB6ModalForm from '../components/calculatormodal';
 
   const about = () => {
 
@@ -93,9 +93,10 @@ Consult With Your Healthcare Provider  </Header>
     it's really true. It took years of gene splicing and combinatory DNA research, but our
     bananas can really dance.
   </p>
-  <Button as='a' size='large'>
+  {/* <Button as='a' size='large'>
     I'm Still Quite Interested
-  </Button>
+  </Button> */}
+   <VitaminB6ModalForm />
 </Container>
 </Segment>
 </div>
