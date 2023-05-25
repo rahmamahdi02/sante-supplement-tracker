@@ -49,10 +49,10 @@ const VitaminB6ModalForm = () => {
       onClick={() => dispatch({ type: 'open', size: 'small' })}
     >
       <Header>Vitamin B6 Level Calculator</Header>
-      <p> Input your age and sex to calculate your RDA Vitamin B6 levels. Get instant results displayed in a table, presenting the appropriate Vitamin B6 level based on your age and sex.
-</p>
       <Modal.Content>
         <Form onSubmit={handleSubmit}>
+        <p> Input your age and sex to calculate your RDA Vitamin B6 levels. Get instant results displayed in a table, presenting the appropriate Vitamin B6 level based on your age and sex.
+</p>
           <Form.Field required>
             <label>Age:</label>
             <input
