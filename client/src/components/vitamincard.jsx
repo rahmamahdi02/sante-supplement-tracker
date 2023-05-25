@@ -5,7 +5,7 @@ const Vitamincard = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/factsheets');
+      const response = await fetch('/api/factsheets');
       if (!response.ok) {
         throw new Error('Request failed with status: ' + response.status);
       }
