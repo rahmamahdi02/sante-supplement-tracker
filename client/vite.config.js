@@ -8,13 +8,14 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  server:{
-    proxy:{
-      "/api":{
+  server: {
+    proxy: {
+      "/api": {
         target: "http://localhost:8080",
-        changeOrigin: true,
+        changeorigin: true,
         secure: false,
-      }
+        setupFiles: './setupTest.js',
+      },
     }
   },
   test: {
@@ -22,4 +23,4 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
   }
-})
+});
