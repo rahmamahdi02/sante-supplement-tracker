@@ -16,12 +16,12 @@ function MyNavBar() {
       <Navbar data-testid="navbar" bg="" variant="dark" sticky="top">
         <Container>
           <Navbar.Brand href="/">
-            <img
+            {/* <img
               src={Logo}
               height="35"
               className="d-lg-inline-block"
               alt="React Bootstrap logo"
-            />
+            /> */}
           </Navbar.Brand>
           {/* {!user ? null : <Nav.Link to="/user-profile" as={Link}>{user.name}</Nav.Link>} */}
 
