@@ -1,15 +1,5 @@
-<!-- <h1 align="center">
-  <br>
-<img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/PROJECTLOGO.png" alt="MoMMLogo" width="200">
-  <br>
-Sante Wellness tacker  <br>
-</h1> -->
 
 <img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/PROJECTLOGO.png" alt="MoMMLogo" >
-
-[![Contributors][contributors-shield]][contributors-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -29,6 +19,10 @@ Sante Wellness tacker  <br>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
+[![Contributors][contributors-shield]][contributors-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
 
 <!-- ABOUT THE PROJECT -->
 
