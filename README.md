@@ -1,9 +1,9 @@
-<h1 align="center">
+<!-- <h1 align="center">
   <br>
 <img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/PROJECTLOGO.png" alt="MoMMLogo" width="200">
   <br>
 Sante Wellness tacker  <br>
-</h1>
+</h1> -->
 
 [![Contributors][contributors-shield]][contributors-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
