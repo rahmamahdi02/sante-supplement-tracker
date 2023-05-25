@@ -1,5 +1,6 @@
 services:
   - name: server
+     plan: Starter
     plan: free
     type: web
     env: node
