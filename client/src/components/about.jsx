@@ -22,18 +22,14 @@ import {
   <Grid.Row>
     <Grid.Column width={8}>
       <Header as='h3' style={{ fontSize: '2em' }}>
-        We Help Companies and Companions
-      </Header>
-      <p style={{ fontSize: '1.33em' }}>
-        We can give your company superpowers to do things that they never thought possible.
-        Let us delight your customers and empower your needs... through pure data analytics.
-      </p>
+You Probally Have A Nutrient Gap ...    </Header>
+      <p style={{ fontSize: '1.53em' }}>
+      Most Americans aren't getting the recommended daily intakes of crucial vitamins and minerals essential for physical & mental health with approximately 85% falling short according to the FDA.      </p>
       <Header as='h3' style={{ fontSize: '2em' }}>
-        We Make Bananas That Can Dance
+        What our my Recommended Daily Allowance (RDA)?
       </Header>
-      <p style={{ fontSize: '1.33em' }}>
-        Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-        bioengineered.
+      <p style={{ fontSize: '1.53em' }}>
+As more Adults, Additionally, over half of Americans over the age of 20, report taking a daily supplement. (NCHS Data Brief 2018
       </p>
     </Grid.Column>
     <Grid.Column floated='right' width={6}>
