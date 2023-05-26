@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import { Modal } from 'semantic-ui-react';
 
-const Vitamincard = ({vitamin}) => {
+const Vitamincard = ({ vitamin }) => {
   const [factsheets, setFactsheets] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedFactsheet, setSelectedFactsheet] = useState(null);
 
   const fetchData = async () => {
     try {
-
-      // swapped get request with a post with multiple data, first vitamin term
       const requestOptions = {
-        method: 'POST', 
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ "vitamin": vitamin.replace( " ","%") }) // use replace method to replace space 
-    };
+        body: JSON.stringify({ vitamin: vitamin.replace(' ', '%') }),
+      };
 
-    const response = await fetch('/api/factsheets',requestOptions);
-
+      const response = await fetch('/api/factsheets', requestOptions);
 
       if (!response.ok) {
         throw new Error('Request failed with status: ' + response.status);
@@ -23,7 +23,7 @@ const Vitamincard = ({vitamin}) => {
 
       if (data) {
         setFactsheets(data);
-         console.log(data);
+        console.log(data);
       }
     } catch (error) {
       console.error(error);
@@ -34,6 +34,15 @@ const Vitamincard = ({vitamin}) => {
     fetchData();
   }, []);
 
+  const openModalHandler = (factsheet) => {
+    setSelectedFactsheet(factsheet);
+    setOpenModal(true);
+  };
+
+  const closeModalHandler = () => {
+    setOpenModal(false);
+  };
+
   return (
     <div>
       {factsheets.map((factsheet, index) => (
@@ -43,11 +52,25 @@ const Vitamincard = ({vitamin}) => {
               <a href={factsheet.link}>{factsheet.link}</a>
             </h5>
             <p className="card-text">{factsheet.name}</p>
+            <button onClick={() => openModalHandler(factsheet)}>Open Modal</button>
           </div>
         </div>
       ))}
+
+      <Modal open={openModal} onClose={closeModalHandler}>
+        <Modal.Header>{selectedFactsheet?.name}</Modal.Header>
+        <Modal.Content>
+          <p>
+            <a href={selectedFactsheet?.link}>{selectedFactsheet?.link}</a>
+          </p>
+        </Modal.Content>
+        <Modal.Actions>
+          <button onClick={closeModalHandler}>Close</button>
+        </Modal.Actions>
+      </Modal>
     </div>
   );
 };
 
 export default Vitamincard;
+
