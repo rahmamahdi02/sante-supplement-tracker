@@ -120,7 +120,7 @@ Consult With Your Healthcare Provider  </Header>
 </Container>
 </Segment>
 
-<Segment style={{ padding: '6em 0em' }} vertical>
+<Segment style={{ padding: '1em 0em' }} vertical>
 
   
 <Container text>
