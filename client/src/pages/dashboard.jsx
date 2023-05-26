@@ -12,9 +12,6 @@ function Dashboard() {
   return (
     <div> 
     <div className="Dashboard-Styling">
-
-{/* <SidebarComponent /> */}
-
 < Profile />
 </div> 
       <Banner />
