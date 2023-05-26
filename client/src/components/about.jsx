@@ -69,7 +69,34 @@ Half of Americans over the age of 20, report taking a daily supplement. (NCHS Da
     </Grid.Column>
   </Grid.Row>
 </Grid>
-// </Segment> */} */}
+// </Segment> */} 
+
+<Segment style={{ padding: '8em 0em' }} vertical>
+
+
+  
+<Container text>
+  <Divider
+    as='h4'
+    className='header'
+    horizontal
+    style={{ margin: '3em 0em', textTransform: 'uppercase' }}
+  >
+    <a href='#'>RDA VALUES</a>
+  </Divider>
+
+  <Header as='h3' style={{ fontSize: '2em' }}>
+    Get Your Personalized RDA Values Below
+  </Header>
+  <p style={{ fontSize: '1.33em' }}>
+    Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
+    it's really true. It took years of gene splicing and combinatory DNA research, but our
+    bananas can really dance.
+  </p>
+   <VitaminB6ModalForm />
+</Container>
+</Segment>
+
 
 <Segment style={{ padding: '8em 0em' }} vertical>
 
@@ -96,13 +123,15 @@ Consult With Your Healthcare Provider  </Header>
     Get Your Personalized RDA Values Below
   </Header>
   <p style={{ fontSize: '1.33em' }}>
-    Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
-    it's really true. It took years of gene splicing and combinatory DNA research, but our
-    bananas can really dance.
+  Input your age and gender to calculate your RDA Vitamin B6 levels. Get instant results displayed in a table, presenting the appropriate Vitamin B6 level based on your age and gender based off FDA Guidelines.
+
   </p>
    <VitaminB6ModalForm />
 </Container>
 </Segment>
+
+
+
 </div>
   );
 };
