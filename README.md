@@ -1,6 +1,7 @@
 
 <img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/readme_logo.png" alt="MoMMLogo" >
 
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -26,8 +27,7 @@
 ## About The Project
 
 
-Introducing Santa Wellness, a PERN Stack Application designed to enhance the daily lives of users by empowering them to track daily Supplements and understand their Recommended Daily Intakee (RDI) values for essential Vitamins & Minerals based on age and sex. With Santa Wellness, you can take control of your well-being and make informed decisions to improve your overall health and nutrition.
-
+Introducing Santa Wellness, a PERN Stack Application designed to enhance the daily lives of users by empowering them to track daily Supplements and understand their Recommended Daily Intakee (RDI) values for essential Vitamins & Minerals based on age and gender. With Santa Wellness, you can take control of your well-being and make informed decisions to improve your overall health and nutrition.
 
 Friendly Interface: Santa Wellness boasts an intuitive and user-friendly interface which allows users to easily generate personalized RDI values via a easy to use calculator. 
 
@@ -49,7 +49,6 @@ Santa Wellness aims to revolutionize your daily life by equipping you with the t
 - ![Semantic UI React](https://img.shields.io/badge/Semantic%20UI%20React-%2335BDB2.svg?style=for-the-badge&logo=SemanticUIReact&logoColor=white)
 
 <img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/app_screenshot.png" />
-
 
 <!-- API Reference -->
 
@@ -94,6 +93,8 @@ Step 5: Start the program!
 ```
 
 <!-- CONTRIBUTING -->
+
+
 
 ## Contributing
 
