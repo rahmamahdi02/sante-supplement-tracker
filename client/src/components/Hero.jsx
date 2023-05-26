@@ -13,7 +13,7 @@ const Hero = () => {
   <Grid.Row>
     <Grid.Column width={8}>
       <Header as='h1' style={{ fontSize: '4em' }}>
-       Keep Track of Your Daily Vitamins
+       Calculate Your Vitamin Dosages
       </Header>
       <p style={{ fontSize: '1.53em' }}>
       Sante is an easy to use application that generates personalized Recommended Daily Allowance (RDA) for over 20 essential vitamins and minerals.
