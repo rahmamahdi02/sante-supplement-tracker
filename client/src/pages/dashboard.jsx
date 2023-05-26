@@ -11,12 +11,10 @@ function Dashboard() {
   return (
     <div> 
     <div className="Dashboard-Styling">
-< Profile />
-< UserDash />
-</div> 
-
+     < Profile />
+     < UserDash />
+       </div> 
      <Footer />
-
     </div>
  
     

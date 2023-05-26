@@ -17,10 +17,18 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<MyNavBar />}>
 
+        {/*         <Route index element={<Home />} />
+        <Route path="/profile" element={<AuthGuard component={Profile} />} /> */}
+
         {isAuthenticated ? (
           <Route index element={<Dashboard />} errorElement={<ErrorPage />} />
+
         ) : (
           <Route index element={<Home />} errorElement={<ErrorPage />} />
+
+
+
+          // TERNARY CONDITIONAL HERE
         )}
         {/* <Route path="user-profile" element={<Profile />} /> */}
         

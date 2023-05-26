@@ -9,7 +9,7 @@ function UserDash() {
     <div> 
     <div className="UserDash-Styling">
 
-      <Banner />
+      {/* <Banner /> */}
        <Calculator />
        < MedicationTable /> 
        </div>
