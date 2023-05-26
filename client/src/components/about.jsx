@@ -71,7 +71,7 @@ Half of Americans over the age of 20, report taking a daily supplement. (NCHS Da
 </Grid>
 // </Segment> */} 
 
-<Segment style={{ padding: '6em 0em' }} vertical>
+<Segment style={{ padding: '4em 0em' }} vertical>
   
 <Container text>
   <Divider
@@ -83,29 +83,43 @@ Half of Americans over the age of 20, report taking a daily supplement. (NCHS Da
     <a href='#'>RDA VALUES</a>
   </Divider>
 
+
   <Header as='h3' style={{ fontSize: '2em' }} centered>
     
     Try the Personalized RDA Values Calculator
   </Header>
+
+  
   <p style={{ fontSize: '1.33em' }}>
   Input your age and gender to calculate your RDA Vitamin B6 levels. Get instant results displayed in a table, presenting the appropriate Vitamin B6 level based on your age and gender based off FDA Guidelines.
 
   </p>
+
    <VitaminB6ModalForm />
-</Container>
-</Segment>
 
+   <Divider
+    as='h4'
+    className='header'
+    horizontal
+    style={{ margin: '2em 0em', textTransform: 'uppercase' }}
+  >
+    <a href='#'>Important Disclaimer</a>
+  </Divider>
 
-<Segment style={{ padding: '8em 0em' }} vertical>
-
-
-  
-<Container text>
   <Header as='h3' style={{ fontSize: '2em' }}>
 Consult With Your Healthcare Provider  </Header>
   <p style={{ fontSize: '1.33em' }}>
   It's important to note that the RDAs are just a starting point. Some people may need more or less of a particular nutrient depending on their individual circumstances, such as their activity level, health status, and dietary preferences. It's always a good idea to talk to your doctor or a registered dietitian to determine your individual nutrient needs.
   </p>
+
+</Container>
+</Segment>
+
+<Segment style={{ padding: '8em 0em' }} vertical>
+
+  
+<Container text>
+ 
 </Container>
 </Segment>
 
