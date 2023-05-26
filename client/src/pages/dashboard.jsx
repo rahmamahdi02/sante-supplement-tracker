@@ -1,8 +1,11 @@
-// import Tracker from  '../components/tracker';
 import Calculator from  '../components/calculator';
-// import MedicationTable from '../components/medicationtracker';
 import Banner from '../components/banner';
 import Footer from '../components/footer';
+
+// import SidebarComponent from '../components/sidebar';
+// import Tracker from  '../components/tracker';
+// import MedicationTable from '../components/medicationtracker';
+
 
 function Dashboard() {
 
@@ -10,13 +13,12 @@ function Dashboard() {
     
     <div className="Dashboard-Styling">
 
-      <Banner />
-     
-       <Calculator />
+{/* <SidebarComponent /> */}
+{/* < Tracker /> 
+< MedicationTable /> */}
 
-       
-       {/* < Tracker /> 
-       < MedicationTable /> */}
+      <Banner />
+       <Calculator />
      <Footer />
 
     </div>
