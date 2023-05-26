@@ -39,9 +39,8 @@ const footer = () => {
             </Grid.Column>
             <Grid.Column width={7}>
               <Header as='h4' inverted>
-              Copyright @ 2023 Sante Wellness            </Header>
-              <p>
-              Developed by Rahma Mahdi, Techtonica H-1 2023 Cohort   </p>
+              Copyright@{new Date().getFullYear()}.            </Header>
+               <span id='copyright-year'> Developed By <a href='https://github.com/rahmamahdi02'>Rahma Mahdi </a> for Techtonica H1</span>
             </Grid.Column>
           </Grid.Row>
         </Grid>
