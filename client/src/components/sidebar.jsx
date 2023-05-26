@@ -92,6 +92,7 @@ const Profile = () => {
         <div className="sidebar">
 
         <h2>Profile </h2>
+        
           <Image
             avatar
             size="small"
@@ -99,8 +100,7 @@ const Profile = () => {
             // alt={userData.name}
           />
           <div className="sidebarItem">
-            <h3>{userData.name}</h3>
-            <p>{userData.email}</p>
+            <h2>{userData.name}</h2>
           </div>
           <div className="sidebarItem">
             <div className="sidebarButton">
