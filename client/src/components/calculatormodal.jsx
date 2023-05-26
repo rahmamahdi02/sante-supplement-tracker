@@ -36,7 +36,7 @@ const VitaminB6ModalForm = () => {
   centered 
   size = "small"
     trigger={
-        <Button onClick={() => {
+        <Button color="blue" size='small' centered onClick={() => {
           handleModalOpen();
         }}>
           Try Vitamin B6 Calculator
