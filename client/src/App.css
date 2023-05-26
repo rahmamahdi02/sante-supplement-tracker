@@ -119,6 +119,10 @@ button.btn.btn-primary {
   align-items: center;
 }
 
+h3 {
+  padding-top: 20px; 
+}
+
 .Dashboard-Styling {
   display: flex;
   align-items: center; /* Vertical alignment */

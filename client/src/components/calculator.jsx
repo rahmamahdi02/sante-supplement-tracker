@@ -89,7 +89,7 @@ const Calculator = () => {
                 <Table.Row>
                   <Table.HeaderCell>Vitamin</Table.HeaderCell>
                   <Table.HeaderCell>Level (mg)</Table.HeaderCell>
-                  <Table.HeaderCell>Factsheet</Table.HeaderCell>
+                  <Table.HeaderCell>FactSheet</Table.HeaderCell>
 
                 </Table.Row>
               </Table.Header>
@@ -102,7 +102,7 @@ const Calculator = () => {
     {selectedVitamin === vitamin ? (
       <Button onClick={() => setSelectedVitamin("")}>Hide Factsheet</Button>
     ) : (
-      <Button onClick={() => showFactSheet(vitamin)}>Show Factsheet</Button> // shoutout to ChatGPT for Logic?? Can I through into a Modal?
+      <Button onClick={() => showFactSheet(vitamin)}>Show Factsheet</Button> 
     )}
   </Table.Cell>
 

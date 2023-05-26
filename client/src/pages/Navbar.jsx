@@ -55,7 +55,7 @@ function MyNavBar() {
 
   return (
     <>
-      <Navbar data-testid="navbar" bg="lights" variant="dark" sticky="top">
+      <Navbar data-testid="navbar" bg="light" variant="dark" sticky="top">
         <Container>
           <Navbar.Brand href="/">
             <img
