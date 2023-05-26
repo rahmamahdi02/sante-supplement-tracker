@@ -45,7 +45,11 @@ Half of Americans over the age of 20, report taking a daily supplement. (NCHS Da
 </Grid>
 </Segment>
 
-<Segment style={{ padding: '0em' }} vertical>
+
+
+{/* Remove Container */}
+
+{/* <Segment style={{ padding: '0em' }} vertical>
 <Grid celled='internally' columns='equal' stackable>
   <Grid.Row textAlign='center'>
     <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
@@ -60,14 +64,17 @@ Half of Americans over the age of 20, report taking a daily supplement. (NCHS Da
       </Header>
       <p style={{ fontSize: '1.33em' }}>
         {/* APPLE: REMOVE OR IMPORT IMAGE <Image avatar src='/images/avatar/large/nan.jpg' /> */}  
-        <b>Nan</b> Chief Fun Officer Acme Toys
+        {/* <b>Nan</b> Chief Fun Officer Acme Toys
       </p>
     </Grid.Column>
   </Grid.Row>
 </Grid>
-</Segment>
+// </Segment> */} */}
 
 <Segment style={{ padding: '8em 0em' }} vertical>
+
+
+  
 <Container text>
   <Header as='h3' style={{ fontSize: '2em' }}>
 Consult With Your Healthcare Provider  </Header>
@@ -93,9 +100,6 @@ Consult With Your Healthcare Provider  </Header>
     it's really true. It took years of gene splicing and combinatory DNA research, but our
     bananas can really dance.
   </p>
-  {/* <Button as='a' size='large'>
-    I'm Still Quite Interested
-  </Button> */}
    <VitaminB6ModalForm />
 </Container>
 </Segment>

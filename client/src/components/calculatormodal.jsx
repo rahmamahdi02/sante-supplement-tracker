@@ -33,11 +33,11 @@ const VitaminB6ModalForm = () => {
 
   return (
     <Modal 
-
+  centered 
+  size = "small"
     trigger={
         <Button onClick={() => {
           handleModalOpen();
-          dispatch({ type: 'open', size: 'small' });
         }}>
           Try Vitamin B6 Calculator
         </Button>
@@ -45,9 +45,9 @@ const VitaminB6ModalForm = () => {
             
       open={modalOpen}
       onClose={handleModalClose}
-      className="centered-modal"
-      onClick={() => dispatch({ type: 'open', size: 'small' })}
+      // className="centered-modal"
     >
+
       <Header>Vitamin B6 Level Calculator</Header>
       <Modal.Content>
         <Form onSubmit={handleSubmit}>

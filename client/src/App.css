@@ -21,11 +21,6 @@ a.navbar-brand {
   margin-left: 5em;
 }
 
-.list-students {
-  text-align: center;
-  margin-top: 25px;
-  flex: 1
-}
 
 ul {
   list-style-type: none;
@@ -84,8 +79,6 @@ button.btn.btn-primary {
   align-items: flex-start;
 }
 
-
-
 .hero-section {
   background-color: rgb(251, 251, 239);
 }
@@ -96,9 +89,8 @@ button.btn.btn-primary {
 
 
 .centered-modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ width: 80%;
+ margin: auto;
 }
 
 .profile {
@@ -111,7 +103,7 @@ button.btn.btn-primary {
   margin: 20px;
   padding-top: 20px;
   
-  color: white;
+  color: rgb(10, 6, 6);
   background-color: rgb(150, 146, 153);
   border-radius: 10px;
   display: flex;
@@ -119,9 +111,6 @@ button.btn.btn-primary {
   align-items: center;
 }
 
-h3 {
-  padding-top: 20px; 
-}
 
 .Dashboard-Styling {
   display: flex;
@@ -133,35 +122,3 @@ h3 {
   margin-right: auto; /* Pushes the SidebarComponent to the left */
 }
 
-
-/* .blob-animation {
-  width: 400px;
-  height: 220px;
-  border-radius: 5rem;
-  background: radial-gradient(
-      63.44% 82.03% at 55.58% -15.63%,
-      #e6b35a 0%,
-      rgba(90, 221, 230, 0.26) 53.72%,
-      rgba(90, 221, 230, 0) 100%
-    ),
-    linear-gradient(
-      26.62deg,
-      rgba(113, 89, 249, 0.8) 20.64%,
-      rgba(249, 124, 89, 0) 49.82%
-    ),
-    linear-gradient(56.79deg, #39813c 33.79%, rgba(185, 91, 230, 0) 72.67%),
-    linear-gradient(
-      301.08deg,
-      rgba(252, 178, 91, 0.91) 20.42%,
-      rgba(252, 178, 91, 0) 60.38%
-    ),
-    linear-gradient(
-      141.57deg,
-      rgba(81, 167, 54, 0.85) 19.08%,
-      rgba(78, 173, 235, 0) 98.72%,
-      #D3E4FF
-    );
-  background-blend-mode: normal, normal, darken, normal, normal, normal;
-  filter: blur(51px);
-  animation: fade-in 3s infinite alternate;
-} */
