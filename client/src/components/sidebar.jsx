@@ -97,8 +97,7 @@ const Profile = () => {
             alt={userData.name}
           />
           <div className="sidebarItem">
-            <h3>MY INFORMATION </h3>
-            <h2>{userData.username}</h2>
+            <h2>Username: {userData.username}</h2>
             <h3>{userData.name}</h3>
             <p>{userData.email}</p>
           </div>
