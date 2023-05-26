@@ -30,8 +30,13 @@ import {
         What our my Recommended Daily Allowance (RDA)?
       </Header>
       <p style={{ fontSize: '1.53em' }}>
-Half of Americans over the age of 20, report taking a daily supplement. (NCHS Data Brief 2018) Get rid of the confusion about how much Vitamin C, you should be taking by getting easy to understand info taiored to your body.
+Half of Americans over the age of 20, report taking a daily supplement (NCHS Data Brief 2018).
       </p>
+
+      <p style={{ fontSize: '1.53em' }}>
+Get rid of the confusion about how much Vitamin C, you should be taking by getting easy to understand info tailored to your body!
+      </p>
+
     </Grid.Column>
     <Grid.Column floated='right' width={6}>
       {/* <Image bordered rounded size='large' src='https://i.pinimg.com/564x/38/2c/73/382c736a597e0f58013e43fb50f14fea.jpg' /> */}

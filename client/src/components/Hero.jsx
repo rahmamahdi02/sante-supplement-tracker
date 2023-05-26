@@ -16,7 +16,7 @@ const Hero = () => {
        Keep Track of Your Daily Vitamins
       </Header>
       <p style={{ fontSize: '1.53em' }}>
-      Sante Wellness Tracker generates personalized Recommended Daily Allowance (RDA) for over 20 essential vitamins and minerals.
+      Sante is an easy to use application that generates personalized Recommended Daily Allowance (RDA) for over 20 essential vitamins and minerals.
       </p>
       <SignupButton />
 
