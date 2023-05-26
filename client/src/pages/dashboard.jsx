@@ -1,7 +1,5 @@
-import Calculator from  '../components/calculator';
-import Banner from '../components/banner';
+
 import Footer from '../components/footer';
-import MedicationTable from '../components/medicationtracker';
 import Profile from '../components/sidebar';
 import UserDash from '../components/UserDash';
 
