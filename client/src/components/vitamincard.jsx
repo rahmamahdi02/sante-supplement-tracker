@@ -10,7 +10,7 @@ const Vitamincard = ({vitamin}) => {
       const requestOptions = {
         method: 'POST', 
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ "vitamin": vitamin.replace( " ","%") })
+        body: JSON.stringify({ "vitamin": vitamin.replace( " ","%") }) // use replace method to replace space 
     };
 
     const response = await fetch('/api/factsheets',requestOptions);
@@ -38,9 +38,11 @@ const Vitamincard = ({vitamin}) => {
     <div>
       {/* < p> testing card </p> */}
       {factsheets.map((factsheet, index) => (
-        <div key= {index} className="card">
+        <div key={index} className="card">
           <div className="card-body">
-            <h5 className="card-title">{factsheet.link}</h5>
+            <h5 className="card-title">
+              <a href={factsheet.link}>{factsheet.link}</a>
+            </h5>
             <p className="card-text">{factsheet.name}</p>
           </div>
         </div>
