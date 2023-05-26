@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Table, Input, Button, Checkbox, Container } from 'semantic-ui-react';
+import { Table, Input, Button, Checkbox } from 'semantic-ui-react';
 
 const MedicationTable = () => {
   const [medications, setMedications] = useState([]);
@@ -43,8 +43,6 @@ const MedicationTable = () => {
 
   return (
     <div>
-          <Container textAlign="center">
-
       <Table celled>
         <Table.Header>
           <Table.Row>
@@ -107,8 +105,6 @@ const MedicationTable = () => {
           </Table.Row>
         </Table.Footer>
       </Table>
-      </Container>
-
     </div>
  
 
