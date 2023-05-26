@@ -1,5 +1,5 @@
 
-<img src=https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/darkbluelogo.png alt="MoMMLogo" >
+<img src=https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/readme_logo.png alt="MoMMLogo" >
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -29,9 +29,9 @@
 Introducing Santa Wellness, a PERN Stack Application designed to enhance the daily lives of users by empowering them to track daily Supplements and understand their Recommended Daily Intakee (RDI) values for essential Vitamins & Minerals based on age and sex. With Santa Wellness, you can take control of your well-being and make informed decisions to improve your overall health and nutrition.
 
 
-Friendly Interface: Santa Wellness boasts an intuitive and user-friendly interface which allows users to easily generate personalized RDI values via a easy to use calculator. Santa Wellness presents your RDI values in a comprehensive manner, allowing you to visualize your progress. View your RDI data as a table easy analysis of your nutrition goals.
+Friendly Interface: Santa Wellness boasts an intuitive and user-friendly interface which allows users to easily generate personalized RDI values via a easy to use calculator. 
 
-Educational Resources: Enhancing your knowledge of nutrition is a vital aspect of Santa Wellness. Use the  our informative library of resources, empowering you to make informed decisions about your Vitamin & Minerals intake. 
+Educational Resources: Enhancing your knowledge of nutrition is a vital aspect of Santa Wellness. Generate a factsheet from the National Health Institute with just a click of button on Vitamin or Mineral of your choice.
 
 Santa Wellness aims to revolutionize your daily life by equipping you with the tools and knowledge needed to track and improve your RDI values effectively. Start your journey to a healthier lifestyle today with Santa Wellness!
 
@@ -48,7 +48,7 @@ Santa Wellness aims to revolutionize your daily life by equipping you with the t
 - [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 - ![Semantic UI React](https://img.shields.io/badge/Semantic%20UI%20React-%2335BDB2.svg?style=for-the-badge&logo=SemanticUIReact&logoColor=white)
 
-<!-- <img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/landingpage_screenshot.png" /> -->
+<img src="https://github.com/rahmamahdi02/sante-supplement-tracker/blob/main/client/src/assets/app_screenshot.png" />
 
 
 <!-- API Reference -->
@@ -94,8 +94,6 @@ Step 5: Start the program!
 ```
 
 <!-- CONTRIBUTING -->
-
-
 
 ## Contributing
 
