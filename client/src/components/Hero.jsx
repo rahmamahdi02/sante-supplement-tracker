@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Grid, Image, Header, Segment, Button} from 'semantic-ui-react';
-import Blob from '../assets/hero_blob.png'
-import BlobAnimation from './BlobAnimation';
+import {Grid, Image, Header, Segment, Button} from 'semantic-ui-react';
+import SignupButton from "../components/SignupButton";
+
 
 const Hero = () => {
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
       <p style={{ fontSize: '1.53em' }}>
       Sante Wellness Tracker generates personalized Recommended Daily Allowance (RDA) for over 20 essential vitamins and minerals.
       </p>
-      <Button size='huge'>Sign Up Now</Button>
+      <SignupButton />
 
     </Grid.Column>
     <Grid.Column floated='right' width={6}>
@@ -27,7 +27,6 @@ const Hero = () => {
   </Grid.Row>
   <Grid.Row>
     <Grid.Column textAlign='center'>
-      {/* <Button size='huge'>Sign Up Now</Button> */}
     </Grid.Column>
   </Grid.Row>
 </Grid>

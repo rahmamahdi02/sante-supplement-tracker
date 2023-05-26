@@ -15,7 +15,7 @@ const SignupButton = () => {
       },
     });
   };
-  return <Button data-testid='signupButton' color="blue" onClick={handleSignUp}>Sign Up</Button>;
+  return <Button data-testid='signupButton' color="blue" size='huge' onClick={handleSignUp}>Sign Up</Button>;
 };
 
 export default SignupButton;
