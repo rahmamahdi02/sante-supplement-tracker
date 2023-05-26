@@ -90,6 +90,10 @@ button.btn.btn-primary {
   background-color: rgb(251, 251, 239);
 }
 
+.banner {
+  background-color: rgb(251, 251, 239);
+}
+
 .bold-text {
   font-weight: bold;
 }
