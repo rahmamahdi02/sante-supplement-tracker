@@ -10,20 +10,23 @@ import Profile from '../components/sidebar';
 function Dashboard() {
 
   return (
-    
+    <div> 
     <div className="Dashboard-Styling">
 
 {/* <SidebarComponent /> */}
 
 < Profile />
+</div> 
       <Banner />
+      <div>
        <Calculator />
-       {/* < Tracker />  */}
        < MedicationTable /> 
+       </div>
 
      <Footer />
 
     </div>
+ 
     
   )
 }

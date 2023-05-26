@@ -119,6 +119,16 @@ button.btn.btn-primary {
   align-items: center;
 }
 
+.Dashboard-Styling {
+  display: flex;
+  align-items: center; /* Vertical alignment */
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.Dashboard-Styling > :first-child {
+  margin-right: auto; /* Pushes the SidebarComponent to the left */
+}
+
 
 /* .blob-animation {
   width: 400px;
