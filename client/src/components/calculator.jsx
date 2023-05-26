@@ -4,7 +4,7 @@ import Vitamincard from '../components/vitamincard';
 
 const Calculator = () => {
   const [age, setAge] = useState("");
-  const [sex, setSex] = useState("");
+  const [gender, setgender] = useState("");
   const [vitaminLevels, setVitaminLevels] = useState({});
   const [factsheetVitamin, setFactsheetVitamin] = useState(null);
   const [selectedVitamin, setSelectedVitamin] = useState("");
@@ -14,7 +14,7 @@ const Calculator = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (sex === "female" && age > 18) {
+    if (gender === "female" && age > 18) {
       setVitaminLevels({
         "Vitamin A": 5,
         "Vitamin C": 5,
@@ -72,8 +72,8 @@ const Calculator = () => {
             />
           </Form.Field>
           <Form.Field required>
-            <label>Sex</label>
-            <select value={sex} onChange={(e) => setSex(e.target.value)}>
+            <label>gender</label>
+            <select value={gender} onChange={(e) => setgender(e.target.value)}>
               <option value="">-- Select --</option>
               <option value="male">Male</option>
               <option value="female">Female</option>

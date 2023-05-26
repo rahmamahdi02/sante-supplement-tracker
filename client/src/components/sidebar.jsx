@@ -99,7 +99,6 @@ const Profile = () => {
             // alt={userData.name}
           />
           <div className="sidebarItem">
-            <h3>{userData.username}</h3>
             <h3>{userData.name}</h3>
             <p>{userData.email}</p>
           </div>
@@ -196,8 +195,8 @@ const Profile = () => {
                   />
                   <Modal.Description>
                     <p className="text-center font-bold text-xl">
-                      You will lose all your reviews and comments. This action
-                      cannot be undone.
+                      This action
+                      cannot be undone.You will loose all RDA values.
                     </p>
                   </Modal.Description>
                 </Modal.Content>

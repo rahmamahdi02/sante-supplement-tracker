@@ -11,21 +11,7 @@ function UserDash() {
     <div> 
     <div className="UserDash-Styling">
 
-    <Segment basic centered>
-      <Banner />
-      </ Segment >
-      <Segment basic centered > 
-      
-      <Calculator />
-
-    
-      </Segment>
-
-       <Segment basic centered>
-
-       < MedicationTable /> 
-
-       </Segment>
+  <Calculator />
        </div>
 
     </div>
