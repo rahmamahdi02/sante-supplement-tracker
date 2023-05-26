@@ -89,6 +89,8 @@ const Calculator = () => {
                 <Table.Row>
                   <Table.HeaderCell>Vitamin</Table.HeaderCell>
                   <Table.HeaderCell>Level (mg)</Table.HeaderCell>
+                  <Table.HeaderCell>Factsheet</Table.HeaderCell>
+
                 </Table.Row>
               </Table.Header>
               <Table.Body>
