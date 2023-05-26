@@ -4,8 +4,7 @@ import { Button, Image } from "semantic-ui-react";
 import { Rating, Modal, Confirm } from "semantic-ui-react";
 
 import IMAGES from "../assets/hero_blob.png";
-// import UpdateReview from "../components/Reviews/UpdateReview";
-// import CommentForm from "../components/Comments/CommentForm";
+
 
 const Profile = () => {
 
@@ -98,6 +97,7 @@ const Profile = () => {
             alt={userData.name}
           />
           <div className="sidebarItem">
+            <h3>MY INFORMATION </h3>
             <h2>{userData.username}</h2>
             <h3>{userData.name}</h3>
             <p>{userData.email}</p>

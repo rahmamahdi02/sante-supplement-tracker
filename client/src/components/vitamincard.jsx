@@ -36,7 +36,6 @@ const Vitamincard = ({vitamin}) => {
 
   return (
     <div>
-      {/* < p> testing card </p> */}
       {factsheets.map((factsheet, index) => (
         <div key={index} className="card">
           <div className="card-body">

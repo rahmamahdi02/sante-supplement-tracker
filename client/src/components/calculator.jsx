@@ -16,19 +16,19 @@ const Calculator = () => {
 
     if (sex === "female" && age > 18) {
       setVitaminLevels({
-        "vitamin A": 5,
-        "vitamin C": 5,
-        "vitamin D": 5,
-        "vitamin E": 5,
-        "vitamin K": 5,
-        "vitamin B1": 5,
-        "vitamin B2": 5,
-        "vitamin B3" : 5,
-        "vitamin B6" : 5,
-        "vitamin B12" : 5,
+        "Vitamin A": 5,
+        "Vitamin C": 5,
+        "Vitamin D": 5,
+        "Vitamin E": 5,
+        "Vitamin K": 5,
+        "Vitamin B1": 5,
+        "Vitamin B2": 5,
+        "Vitamin B3" : 5,
+        "Vitamin B6" : 5,
+        "Vitamin B12" : 5,
         "Pantothenic Acid" : 5,
-        "biotin" : 5,
-        "folate" : 5
+        "Biotin" : 5,
+        "Folate" : 5
       });
     } else {
       setVitaminLevels({});
@@ -89,6 +89,8 @@ const Calculator = () => {
                 <Table.Row>
                   <Table.HeaderCell>Vitamin</Table.HeaderCell>
                   <Table.HeaderCell>Level (mg)</Table.HeaderCell>
+                  <Table.HeaderCell>FactSheet</Table.HeaderCell>
+
                 </Table.Row>
               </Table.Header>
               <Table.Body>
@@ -100,7 +102,7 @@ const Calculator = () => {
     {selectedVitamin === vitamin ? (
       <Button onClick={() => setSelectedVitamin("")}>Hide Factsheet</Button>
     ) : (
-      <Button onClick={() => showFactSheet(vitamin)}>Show Factsheet</Button> // shoutout to ChatGPT for Logic?? Can I through into a Modal?
+      <Button onClick={() => showFactSheet(vitamin)}>Show Factsheet</Button> 
     )}
   </Table.Cell>
 

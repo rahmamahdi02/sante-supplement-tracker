@@ -1,6 +1,8 @@
 import Calculator from  '../components/calculator';
 import Banner from '../components/banner';
 import MedicationTable from '../components/medicationtracker';
+import { Segment } from 'semantic-ui-react';
+
 
 
 function UserDash() {
@@ -9,9 +11,21 @@ function UserDash() {
     <div> 
     <div className="UserDash-Styling">
 
+    <Segment basic centered>
       <Banner />
-       <Calculator />
+      </ Segment >
+      <Segment basic centered > 
+      
+      <Calculator />
+
+    
+      </Segment>
+
+       <Segment basic centered>
+
        < MedicationTable /> 
+
+       </Segment>
        </div>
 
     </div>

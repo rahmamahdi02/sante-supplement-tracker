@@ -15,7 +15,7 @@ import {
 
 const footer = () => {
   return (
-    <div >
+    <div>
           <Segment inverted vertical style={{ background: 'dark', padding: '8em 0em' }}>
           <Container>
 
@@ -24,9 +24,9 @@ const footer = () => {
             <Grid.Column width={3}>
               <Header inverted as='h4' content='Home' />
               <List link inverted>
-                <List.Item as='a'>Login</List.Item>
-                <List.Item as='a'>Logout</List.Item>
-                <List.Item as='a'>Calculator</List.Item>
+                <List.Item as='a'>Sign Up</List.Item>
+                <List.Item as='a'>Log In</List.Item>
+                <List.Item as='a'> Try Calculator</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={3}>
