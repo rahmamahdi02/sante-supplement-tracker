@@ -90,20 +90,22 @@ const Profile = () => {
     isAuthenticated && (
       <div data-testid='profile' className="profile">
         <div className="sidebar">
+
+        <h2>Profile </h2>
           <Image
             avatar
             size="small"
             src={userData.picture ? userData.picture : IMAGES}
-            alt={userData.name}
+            // alt={userData.name}
           />
           <div className="sidebarItem">
-            <h2>Username: {userData.username}</h2>
+            <h3>{userData.username}</h3>
             <h3>{userData.name}</h3>
             <p>{userData.email}</p>
           </div>
           <div className="sidebarItem">
             <div className="sidebarButton">
-              <Modal
+              {/* <Modal
                 trigger={<Button>Update Profile</Button>}
                 open={showModal}
                 onClose={() => setShowModal(false)}
@@ -169,8 +171,9 @@ const Profile = () => {
                     Cancel
                   </Button>
                 </Modal.Actions>
-              </Modal>
+              </Modal> */}
             </div>
+
             <div className="sidebarButton">
               <Modal
                 trigger={<Button>Delete Profile</Button>}
