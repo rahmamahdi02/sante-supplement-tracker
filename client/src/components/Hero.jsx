@@ -18,8 +18,7 @@ const Hero = () => {
       <p style={{ fontSize: '1.53em' }}>
       Sante is an easy to use application that generates personalized Recommended Daily Allowance (RDA) for over 20 essential vitamins and minerals.
       </p>
-      <SignupButton />
-
+ 
     </Grid.Column>
     <Grid.Column floated='right' width={6}>
       <Image bordered rounded size='large' src='https://i.pinimg.com/564x/38/2c/73/382c736a597e0f58013e43fb50f14fea.jpg' />

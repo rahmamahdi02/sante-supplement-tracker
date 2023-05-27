@@ -1,4 +1,4 @@
-import Hero from  '../components/Hero';
+import Hero2 from  '../components/Hero2';
 import About from '../components/about';
 import Footer from '../components/footer';
 
@@ -6,8 +6,7 @@ const Home = () => {
     
     return (
         <div>
-            <Hero />
-         
+            <Hero2 />
         </div>
     )};
 
