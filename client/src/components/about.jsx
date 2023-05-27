@@ -10,6 +10,7 @@ import {
   } from 'semantic-ui-react'
   import BlobAnimation from './BlobAnimation';
   import VitaminB6ModalForm from '../components/calculatormodal';
+  import Calculator from '../components/calculator';
 
   const about = () => {
 
@@ -120,11 +121,9 @@ Consult With Your Healthcare Provider  </Header>
 </Container>
 </Segment>
 
-<Segment style={{ padding: '1em 0em' }} vertical>
-
-  
+<Segment style={{ padding: '2em 0em' }} vertical>
 <Container text>
- 
+<Calculator />
 </Container>
 </Segment>
 

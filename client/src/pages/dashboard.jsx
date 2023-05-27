@@ -1,7 +1,8 @@
 
 import Footer from '../components/footer';
-import Profile from '../components/sidebar';
-import UserDash from '../components/UserDash';
+import About from '../components/about';
+import Hero from  '../components/Hero';
+
 
 // import Tracker from  '../components/tracker';
 // import SidebarComponent from '../components/sidebar';
@@ -10,10 +11,10 @@ function Dashboard() {
 
   return (
     <div> 
-    <div className="Dashboard-Styling">
-     < Profile />
-     < UserDash />
-       </div> 
+
+    <Hero />
+<About />
+
      <Footer />
     </div>
  
