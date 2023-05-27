@@ -100,7 +100,7 @@ const Calculator = () => {
                     <Table.Cell>{vitaminLevels[vitamin]}</Table.Cell>
                     <Table.Cell>
     {selectedVitamin === vitamin ? (
-      <Button onClick={() => setSelectedVitamin("")}>Hide Factsheet</Button>
+      <Button onClick={() => showFactSheet("")}>Hide Factsheet</Button>
     ) : (
       <Button onClick={() => showFactSheet(vitamin)}>Show Factsheet</Button> 
     )}
