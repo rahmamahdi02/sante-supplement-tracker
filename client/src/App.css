@@ -5,12 +5,7 @@
   background-color: rgb(251, 251, 239);
   margin: 5px;
 }
-/* 
-.mybody {
-  display: flex;
-  gap: 3em;
-  padding: 1em;
-}
+
 
 a.navbar-brand {
   margin-inline-start: -5em;
@@ -18,8 +13,18 @@ a.navbar-brand {
 
 .nav-link {
   color: rgb(71, 70, 70) !important;
-  margin-left: 5em;
+  margin-left : 5 em !important;
 }
+
+
+/* 
+.mybody {
+  display: flex;
+  gap: 3em;
+  padding: 1em;
+}
+
+
 
 
 ul {
