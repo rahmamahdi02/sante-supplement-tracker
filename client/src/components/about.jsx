@@ -122,7 +122,7 @@ Consult With Your Healthcare Provider  </Header>
 </Segment>
 
 <Segment style={{ padding: '2em 0em' }} vertical>
-<Container text>
+<Container>
 <Calculator />
 </Container>
 </Segment>

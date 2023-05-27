@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import Logo from '../assets/readme_logo.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import { Outlet, Link } from "react-router-dom";
@@ -69,7 +70,7 @@ function MyNavBar() {
 
 
           </Navbar.Brand>
-          {/* {!user ? null : <Nav.Link to="/user-profile" as={Link}>{user.name}</Nav.Link>} */}
+          {!user ? null : <Nav.Link to="/user-profile" as={Link}> Welcome, {user.name}</Nav.Link>}
 
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
