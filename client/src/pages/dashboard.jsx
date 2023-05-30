@@ -4,9 +4,6 @@ import About from '../components/about';
 import Hero from  '../components/Hero';
 
 
-// import Tracker from  '../components/tracker';
-// import SidebarComponent from '../components/sidebar';
-
 function Dashboard() {
 
   return (
