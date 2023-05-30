@@ -52,7 +52,7 @@ const Vitamincard = ({ vitamin }) => {
               <a href={factsheet.link}>{factsheet.link}</a>
             </h5>
             <p className="card-text">{factsheet.name}</p>
-            <Button onClick={() => openModalHandler(factsheet)}>Open Modal</Button>
+            <Button onClick={() => openModalHandler(factsheet)}>Click to Open</Button>
           </div>
         </div>
       ))}

@@ -6,7 +6,6 @@ import MyNavBar from '../src/pages/Navbar'
 import Home from './pages/Home';
 import Dashboard from './pages/dashboard';
 import ErrorPage from './components/error-page';
-// import Profile from './components/Profile';
 
 function App() {
 
@@ -17,23 +16,12 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<MyNavBar />}>
 
-        {/*         <Route index element={<Home />} />
-        <Route path="/profile" element={<AuthGuard component={Profile} />} /> */}
-
-
         {isAuthenticated ? (
           <Route index element={<Dashboard />} errorElement={<ErrorPage />} />
-
         ) : (
           <Route index element={<Home />} errorElement={<ErrorPage />} />
-          
         )}
 
-
-{/* // TERNARY CONDITIONAL HERE */}
-
-        {/* <Route path="user-profile" element={<Profile />} /> */}
-        
       </Route>
     )
   );
