@@ -1,11 +1,9 @@
 import React from 'react'
 import {
-    Button,
     Container,
     Divider,
     Grid,
     Header,
-    Image,
     Segment,
   } from 'semantic-ui-react'
   import BlobAnimation from './BlobAnimation';

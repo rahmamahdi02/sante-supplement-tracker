@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Modal } from 'semantic-ui-react';
+import { Modal, Button } from 'semantic-ui-react';
 
 const Vitamincard = ({ vitamin }) => {
   const [factsheets, setFactsheets] = useState([]);
@@ -52,7 +52,7 @@ const Vitamincard = ({ vitamin }) => {
               <a href={factsheet.link}>{factsheet.link}</a>
             </h5>
             <p className="card-text">{factsheet.name}</p>
-            <button onClick={() => openModalHandler(factsheet)}>Open Modal</button>
+            <Button onClick={() => openModalHandler(factsheet)}>Open Modal</Button>
           </div>
         </div>
       ))}
@@ -65,7 +65,7 @@ const Vitamincard = ({ vitamin }) => {
           </p>
         </Modal.Content>
         <Modal.Actions>
-          <button onClick={closeModalHandler}>Close</button>
+          <Button onClick={closeModalHandler}>Close</Button>
         </Modal.Actions>
       </Modal>
     </div>
