@@ -16,19 +16,21 @@ const Calculator = () => {
 
     if (gender === "female" && age > 18) {
       setVitaminLevels({
-        "Vitamin A": "1.4",
-        "Vitamin C": "300 mcg",
-        "Vitamin D": "5 ug",
-        "Vitamin E": "300 mg",
-        "Vitamin K": "5 mcg" ,
-        "Vitamin B1": "5 ug" ,
-        "Vitamin B2": "5 mg",
-        "Vitamin B3" : "1.2 mg",
-        "Vitamin B6" : "35 mg" ,
-        "Vitamin B12" : "23 mcg" ,
-        "Pantothenic Acid" : "5 uic",
-        "Biotin" : "35 mg",
-        "Folate" : "25 mg"
+        "Vitamin A": "900 mcg",
+        "Vitamin C": "90 mg",
+        "Vitamin D": "20 ug",
+        "Vitamin E": "15 mcg",
+        "Vitamin K": "120 mcg" ,
+        "Vitamin B1": "1.2 mg" ,
+        "Vitamin B2": "1.3 mg",
+        "Vitamin B3" : "1.6 mg",
+        "Vitamin B6" : "400 mg" ,
+        "Vitamin B12" : "2.4 mcg" ,
+        "Pantothenic Acid" : "5 mg",
+        "Choline" : "550 mg",
+        "Biotin" : "30 mg",
+        "Folate" : "25 mg",
+
       });
     } else {
       setVitaminLevels({});
