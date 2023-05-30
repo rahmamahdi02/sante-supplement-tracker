@@ -37,7 +37,6 @@ Get rid of the confusion about how much Vitamin C, you should be taking by getti
 
     </Grid.Column>
     <Grid.Column floated='right' width={6}>
-      {/* <Image bordered rounded size='large' src='https://i.pinimg.com/564x/38/2c/73/382c736a597e0f58013e43fb50f14fea.jpg' /> */}
       < BlobAnimation />
     </Grid.Column>
   </Grid.Row>
@@ -48,31 +47,6 @@ Get rid of the confusion about how much Vitamin C, you should be taking by getti
 </Grid>
 </Segment>
 
-
-
-{/* Remove Container */}
-
-{/* <Segment style={{ padding: '0em' }} vertical>
-<Grid celled='internally' columns='equal' stackable>
-  <Grid.Row textAlign='center'>
-    <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-      <Header as='h3' style={{ fontSize: '2em' }}>
-        "What a Company"
-      </Header>
-      <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
-    </Grid.Column>
-    <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-      <Header as='h3' style={{ fontSize: '2em' }}>
-        "I shouldn't have gone with their competitor."
-      </Header>
-      <p style={{ fontSize: '1.33em' }}>
-        {/* APPLE: REMOVE OR IMPORT IMAGE <Image avatar src='/images/avatar/large/nan.jpg' /> */}  
-        {/* <b>Nan</b> Chief Fun Officer Acme Toys
-      </p>
-    </Grid.Column>
-  </Grid.Row>
-</Grid>
-// </Segment> */} 
 
 <Segment style={{ padding: '4em 0em' }} vertical>
   
