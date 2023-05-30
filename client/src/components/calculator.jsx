@@ -100,7 +100,6 @@ const Calculator = () => {
                     <Table.Cell>{vitamin}</Table.Cell>
                     <Table.Cell>{vitaminLevels[vitamin]}</Table.Cell>
                     <Table.Cell>
-                    <h2> Source: Source: https://s3.amazonaws.com/public-inspection.federalregister.gov/2016-11867.pdf (pages 903-904) </h2>
 
     {selectedVitamin === vitamin ? (
       <Button onClick={() => showFactSheet("")}>Hide Factsheet</Button>
@@ -113,6 +112,7 @@ const Calculator = () => {
                 ))}
               </Table.Body>
             </Table>
+            <h4> Source : <a href="https://s3.amazonaws.com/public-inspection.federalregister.gov/2016-11867.pdf"> (pFood and Drug Administration, Food Labeling: Revision of the Nutrition and Supplement Facts Labels) </a></h4>
           </div>
         )}
 {factsheetVitamin && <Vitamincard vitamin={factsheetVitamin} />}
