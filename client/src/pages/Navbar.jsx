@@ -4,8 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Logo from '../assets/readme_logo.png';
 import { useAuth0 } from "@auth0/auth0-react";
 import { Outlet, Link } from "react-router-dom";
-
-
+import { useEffect } from 'react';
 
 
 function MyNavBar() {
@@ -13,44 +12,33 @@ function MyNavBar() {
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
 
+   //A function to handle the post request
+   const addUserToDB = async (authUser) => {
+    try {
+      const userInfo = {
+        user_id: authUser.sub,
+        username: authUser.name,
+        email: authUser.email,
+        image: authUser.picture,
+      };
+      const response = await fetch(`/api/users`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userInfo),
+      });
+      const userAdded = await response.json();
+      console.log(userAdded);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
+  useEffect(() => {
+    addUserToDB(user);
+  }, [user, isAuthenticated]);
 
-
-
-
-
-
-
-  //  //A function to handle the post request
-  //  const addUserToDB = async (authUser) => {
-  //   try {
-  //     const userInfo = {
-  //       user_id: authUser.sub,
-  //       name: authUser.name,
-  //       email: authUser.email,
-  //       username: authUser.nickname,
-  //       picture: authUser.picture,
-  //     };
-  //     const response = await fetch(`/api/users`, {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(userInfo),
-  //     });
-  //     const userAdded = await response.json();
-  //     console.log(userAdded);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   addUserToDB(user);
-  // }, [user, isAuthenticated]);
-
-  // console.log("From Navbar", user);
-  // console.log("From Navbar", isAuthenticated);
-
-
+  console.log("From Navbar", user);
+  console.log("From Navbar", isAuthenticated);
 
   
 
@@ -65,10 +53,6 @@ function MyNavBar() {
               className="d-lg-inline-block"
               alt="React Bootstrap logo"
             />
-
-
-
-
           </Navbar.Brand>
           
 
@@ -79,7 +63,6 @@ function MyNavBar() {
             {!isAuthenticated ? null : (
   <button className="ui grey basic button">Welcome, {user.name}</button>
 )}
-
 
             </Navbar.Text>
           

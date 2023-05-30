@@ -1,6 +1,5 @@
 import React from 'react';
 import {Grid, Image, Header, Segment, Button} from 'semantic-ui-react';
-import SignupButton from "../components/SignupButton";
 
 
 const Hero = () => {
