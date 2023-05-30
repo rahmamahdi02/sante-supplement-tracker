@@ -14,7 +14,7 @@ const Calculator = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (gender === "female" && age > 18) {
+    if (gender === "Female" && age >= 18 || gender === "Male" && age >= 18  || gender === "Non-binary" && age >= 18  ) {
       setVitaminLevels({
         "Vitamin A": "900 mcg",
         "Vitamin C": "90 mg",
@@ -37,16 +37,7 @@ const Calculator = () => {
     }
   };
 
-  // add buttons in table 
-  // onCLick => term for api to DSLD 
-  // how if factsheet is a child of calculator how to send api call?
-  
-  // const showFactSheet = (vitamin) => {
-  // //   setFactsheetVitamin(vitamin);
-  // //   setSelectedVitamin(vitamin);
-  // // };
 
-  // use if else statement to toggle like with a coin flip
   const showFactSheet = (vitamin) => {
     if (factsheetVitamin === vitamin) {
       setFactsheetVitamin(null);
@@ -55,9 +46,7 @@ const Calculator = () => {
     }
   };
 
-  
-  // here we need to do 2 things, first show the card, secound track the instand of that row button being called
-  // so if 2 buttons are shown, 2 fact sheets are shown?
+
 
   return (
     <Container textAlign="center">
@@ -76,8 +65,10 @@ const Calculator = () => {
             <label>gender</label>
             <select value={gender} onChange={(e) => setgender(e.target.value)}>
               <option value="">-- Select --</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Non-binary">Non-binary</option>
+
             </select>
           </Form.Field>
           <Button type="submit">Calculate Vitamin Levels</Button>
@@ -112,7 +103,7 @@ const Calculator = () => {
                 ))}
               </Table.Body>
             </Table>
-            <h4> Source : <a href="https://s3.amazonaws.com/public-inspection.federalregister.gov/2016-11867.pdf"> (pFood and Drug Administration, Food Labeling: Revision of the Nutrition and Supplement Facts Labels) </a></h4>
+            <h4> Source : <a href="https://s3.amazonaws.com/public-inspection.federalregister.gov/2016-11867.pdf"> (Food and Drug Administration, Food Labeling: Revision of the Nutrition and Supplement Facts Labels) </a></h4>
           </div>
         )}
 {factsheetVitamin && <Vitamincard vitamin={factsheetVitamin} />}
