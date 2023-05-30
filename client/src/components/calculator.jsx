@@ -9,7 +9,7 @@ const Calculator = () => {
   const [factsheetVitamin, setFactsheetVitamin] = useState(null);
   const [selectedVitamin, setSelectedVitamin] = useState("");
 
-  // need another instance of state for thee selected vitamin for which the factsheet is being shown
+  // need another instance of state for the selected vitamin for which the factsheet is being shown
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,7 +45,6 @@ const Calculator = () => {
   // //   setFactsheetVitamin(vitamin);
   // //   setSelectedVitamin(vitamin);
   // // };
-
 
   // use if else statement to toggle like with a coin flip
   const showFactSheet = (vitamin) => {
@@ -101,6 +100,8 @@ const Calculator = () => {
                     <Table.Cell>{vitamin}</Table.Cell>
                     <Table.Cell>{vitaminLevels[vitamin]}</Table.Cell>
                     <Table.Cell>
+                    <h2> Source: Source: https://s3.amazonaws.com/public-inspection.federalregister.gov/2016-11867.pdf (pages 903-904) </h2>
+
     {selectedVitamin === vitamin ? (
       <Button onClick={() => showFactSheet("")}>Hide Factsheet</Button>
     ) : (
