@@ -11,36 +11,24 @@ function MyNavBar() {
 
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
-
-   //A function to handle the post request
-   const addUserToDB = async (authUser) => {
-    try {
-      const userInfo = {
-        user_id: authUser.sub,
-        username: authUser.name,
-        email: authUser.email,
-        image: authUser.picture,
-      };
-      const response = await fetch(`/api/users`, {
+  useEffect(() => {
+    if (isAuthenticated) {
+      fetch("/api/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(userInfo),
-      });
-      const userAdded = await response.json();
-      console.log(userAdded);
-    } catch (error) {
-      console.log(error.message);
+        body: JSON.stringify(user),
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+        })
     }
-  };
-
-  useEffect(() => {
-    addUserToDB(user);
-  }, [user, isAuthenticated]);
+  }, [isAuthenticated, user]);
 
   console.log("From Navbar", user);
   console.log("From Navbar", isAuthenticated);
 
-  
 
   return (
     <>
@@ -59,12 +47,14 @@ function MyNavBar() {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
 
+
           <Navbar.Text>
             {!isAuthenticated ? null : (
   <button className="ui grey basic button">Welcome, {user.name}</button>
 )}
 
             </Navbar.Text>
+
           
             <Navbar.Text>
               {!isAuthenticated ? (<button className=" ui grey basic button" onClick={() => loginWithRedirect()}>Log In</button> ) : (<button className="ui red basic button" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>

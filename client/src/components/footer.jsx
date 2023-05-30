@@ -21,21 +21,21 @@ const footer = () => {
 
           <Grid divided inverted stackable>
           <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Home' />
-              <List link inverted>
+            <Grid.Column width={0}>
+              {/* <Header inverted as='h4' content='Home' /> */}
+              {/* <List link inverted>
                 <List.Item as='a'>Sign Up</List.Item>
                 <List.Item as='a'>Log In</List.Item>
                 <List.Item as='a'> Try Calculator</List.Item>
-              </List>
+              </List> */}
             </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Dashboard' />
-              <List link inverted>
+            <Grid.Column width={0}>
+              {/* <Header inverted as='h4' content='Dashboard' /> */}
+              {/* <List link inverted>
               <List.Item as='a'>Profile</List.Item>
                 <List.Item as='a'>Calculator</List.Item>
                 <List.Item as='a'>Factsheet</List.Item>
-              </List>
+              </List> */}
             </Grid.Column>
             <Grid.Column width={7}>
               <Header as='h4' inverted>
