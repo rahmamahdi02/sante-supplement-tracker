@@ -1,4 +1,4 @@
-import Hero2 from  '../components/Hero2';
+import Hero2 from  '../components/hero2';
 import About2 from '../components/about2';
 import Footer from '../components/footer';
 
