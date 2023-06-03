@@ -27,7 +27,7 @@
 ## About The Project
 
 
-Introducing Santa Wellness, a PERN Stack Application designed to enhance the daily lives of users by empowering them to track daily Supplements and understand their Recommended Daily Intakee (RDI) values for essential Vitamins & Minerals based on age and gender. With Santa Wellness, you can take control of your well-being and make informed decisions to improve your overall health and nutrition.
+Introducing Sante Wellness, a PERN Stack Application designed to enhance the daily lives of users by empowering them to track daily Supplements and understand their Recommended Daily Intakee (RDI) values for essential Vitamins & Minerals based on age and gender. With Santa Wellness, you can take control of your well-being and make informed decisions to improve your overall health and nutrition.
 
 Friendly Interface: Santa Wellness boasts an intuitive and user-friendly interface which allows users to easily generate personalized RDI values via a easy to use calculator. 
 
