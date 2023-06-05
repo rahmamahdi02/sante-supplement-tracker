@@ -1,92 +1,64 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
+import { Table, Input } from 'semantic-ui-react';
+
 
 function Tracker() {
-  const [medicationData, setMedicationData] = useState([]);
-  const [medicationName, setMedicationName] = useState('');
+  const [medication, setMedication] = useState('');
   const [dosage, setDosage] = useState('');
+  const [dosagePerDay, setDosagePerDay] = useState(Array(7).fill(0));
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch('/api/medicationData'); // Replace with your actual API endpoint
-      const data = await response.json();
-      setMedicationData(data);
-    } catch (error) {
-      console.error('Error fetching medication data:', error);
-    }
+  const handleMedicationChange = (event) => {
+    setMedication(event.target.value);
   };
 
-  const handleMedicationSubmit = async (e) => {
-    e.preventDefault();
+  const handleDosageChange = (event) => {
+    setDosage(event.target.value);
+  };
 
-    try {
-      const response = await fetch('/api/medicationData', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          medication_name: medicationName,
-          dosage: dosage,
-        }),
-      });
+  const handleDosagePerDayChange = (dayIndex, event) => {
+    const updatedDosagePerDay = [...dosagePerDay];
+    updatedDosagePerDay[dayIndex] = event.target.value;
+    setDosagePerDay(updatedDosagePerDay);
+  };
 
-      if (response.ok) {
-        // Medication added successfully, fetch updated data
-        fetchData();
-        setMedicationName('');
-        setDosage('');
-      } else {
-        console.error('Error adding medication:', response.statusText);
-      }
-    } catch (error) {
-      console.error('Error adding medication:', error);
-    }
+  const renderTableRows = () => {
+    return dosagePerDay.map((dosage, index) => (
+      <Table.Row key={index}>
+        <Table.Cell>{index + 1}</Table.Cell>
+        <Table.Cell>
+          <Input
+            value={dosage}
+            onChange={(event) => handleDosagePerDayChange(index, event)}
+            type="number"
+          />
+        </Table.Cell>
+      </Table.Row>
+    ));
   };
 
   return (
     <div>
-      <h2>Medication Data</h2>
-      <form onSubmit={handleMedicationSubmit}>
-        <div>
-          <label htmlFor="medicationName">Medication Name:</label>
-          <input
-            type="text"
-            id="medicationName"
-            value={medicationName}
-            onChange={(e) => setMedicationName(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="dosage">Dosage:</label>
-          <input
-            type="text"
-            id="dosage"
-            value={dosage}
-            onChange={(e) => setDosage(e.target.value)}
-          />
-        </div>
-        <button type="submit">Add Medication</button>
-      </form>
-      {medicationData.map((medication) => (
-        <div key={medication.medication_id}>
-          <h3>{medication.medication_name}</h3>
-          <ul>
-            <li>Monday: {medication.monday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
-            <li>Tuesday: {medication.tuesday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
-            <li>Wednesday: {medication.wednesday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
-            <li>Thursday: {medication.thursday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
-            <li>Friday: {medication.friday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
-            <li>Saturday: {medication.saturday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
-            <li>Sunday: {medication.sunday ? `Dosage: ${medication.dosage}` : 'Not taken'}</li>
-          </ul>
-        </div>
-      ))}
+      <div>
+        <label>Medication:</label>
+        <Input value={medication} onChange={handleMedicationChange} />
+      </div>
+      <div>
+        <label>Dosage:</label>
+        <Input value={dosage} onChange={handleDosageChange} />
+      </div>
+      <Table celled>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell>Day</Table.HeaderCell>
+            <Table.HeaderCell>Dosage</Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>{renderTableRows()}</Table.Body>
+      </Table>
     </div>
   );
-}
+};
+
+
 
 export default Tracker;

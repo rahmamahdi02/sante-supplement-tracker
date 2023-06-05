@@ -1,11 +1,9 @@
 import React from 'react'
 import {
-    Button,
     Container,
     Divider,
     Grid,
     Header,
-    Image,
     Segment,
   } from 'semantic-ui-react'
   import BlobAnimation from './BlobAnimation';
@@ -24,7 +22,7 @@ import {
     <Grid.Column width={8}>
     
       <Header as='h3' style={{ fontSize: '2.2em' }}>
-..You Probally Have A Nutrient Gap ..    </Header>
+..You Probaly Have A Nutrient Gap ..    </Header>
       <p style={{ fontSize: '1.53em' }}>
       Most Americans aren't getting the recommended daily intakes of crucial vitamins and minerals essential for physical & mental health with approximately 85% falling short according to the FDA.      </p>
       <Header as='h3' style={{ fontSize: '2em' }}>
@@ -52,30 +50,6 @@ Get rid of the confusion about how much Vitamin C, you should be taking by getti
 </Segment>
 
 
-
-{/* Remove Container */}
-
-{/* <Segment style={{ padding: '0em' }} vertical>
-<Grid celled='internally' columns='equal' stackable>
-  <Grid.Row textAlign='center'>
-    <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-      <Header as='h3' style={{ fontSize: '2em' }}>
-        "What a Company"
-      </Header>
-      <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
-    </Grid.Column>
-    <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-      <Header as='h3' style={{ fontSize: '2em' }}>
-        "I shouldn't have gone with their competitor."
-      </Header>
-      <p style={{ fontSize: '1.33em' }}>
-        {/* APPLE: REMOVE OR IMPORT IMAGE <Image avatar src='/images/avatar/large/nan.jpg' /> */}  
-        {/* <b>Nan</b> Chief Fun Officer Acme Toys
-      </p>
-    </Grid.Column>
-  </Grid.Row>
-</Grid>
-// </Segment> */} 
 
 <Segment style={{ padding: '4em 0em' }} vertical>
   

@@ -56,9 +56,14 @@ app.post('/api/users', async (req, res) => {
 
 
 app.post("/api/factsheets", async (req, res) => {
+
   let vitamin = req.body.vitamin; console.log(vitamin);
+
   let api_key = process.env.API_KEY;
+
+
   try {
+    
     axios.get(`https://api.ods.od.nih.gov/dsld/v9/ingredient-groups/?method=factsheet&term=${vitamin}&api_key=${api_key}`).then((response) => {
       // console.log("response.data: ", response.data.hits[0]._source.factsheets);
       let result =  response.data.hits;

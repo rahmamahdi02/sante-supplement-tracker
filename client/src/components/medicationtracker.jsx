@@ -11,6 +11,7 @@ const MedicationTable = () => {
   };
 
   const handleAddMedication = () => {
+
     if (newMedication.trim() !== '') {
       setMedications([...medications, newMedication]);
       setNewMedication('');
@@ -61,12 +62,10 @@ const MedicationTable = () => {
         <Table.Body>
           {medications.map((medication, index) => (
             <Table.Row key={index}>
-              <Table.Cell>
-                <Input
-                  value={medication}
-                  onChange={(e) => handleEditMedication(index, e.target.value)}
-                />
-              </Table.Cell>
+            <Table.Cell>
+             <h4>  {medication} </h4>
+            </Table.Cell>
+
               {schedule[index].map((taken, dayIndex) => (
                 <Table.Cell key={dayIndex}>
                   <Checkbox
@@ -81,7 +80,17 @@ const MedicationTable = () => {
                   color="red"
                   onClick={() => handleDeleteMedication(index)}
                 />
+
+
+                <Button
+                  icon="sync alternate"
+                  color="green"
+                  onClick={() => handleEditMedication(index)}
+                />
+              
+
               </Table.Cell>
+              
             </Table.Row>
           ))}
         </Table.Body>
@@ -99,7 +108,7 @@ const MedicationTable = () => {
               <Button
                 icon="plus"
                 color="green"
-                onClick={handleAddMedication}
+                onClick={handleMedicationChange}
               />
             </Table.HeaderCell>
           </Table.Row>
