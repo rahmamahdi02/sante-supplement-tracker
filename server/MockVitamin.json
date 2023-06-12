@@ -1,0 +1,111 @@
+{
+    "Vitamin A": {
+      "Unit": "Micrograms RAE2 (mcg)",
+      "Value": 900
+    },
+    "Vitamin C": {
+      "Unit": "Milligrams (mg)",
+      "Value": 90
+    },
+    "Calcium": {
+      "Unit": "Milligrams (mg)",
+      "Value": 1300
+    },
+    "Iron": {
+      "Unit": "Milligrams (mg)",
+      "Value": 18
+    },
+    "Vitamin D": {
+      "Unit": "Micrograms (mcg)",
+      "Value": 20
+    },
+    "Vitamin E": {
+      "Unit": "Milligrams (mg)",
+      "Value": 15
+    },
+    "Vitamin K": {
+      "Unit": "Micrograms (mcg)",
+      "Value": 120
+    },
+    "Thiamin": {
+      "Unit": "Milligrams (mg)",
+      "Value": 1.2
+    },
+    "Riboflavin": {
+      "Unit": "Milligrams (mg)",
+      "Value": 1.3
+    },
+    "Niacin": {
+      "Unit": "Milligrams NE5 (mg)",
+      "Value": 16
+    },
+    "Vitamin B6": {
+      "Unit": "Milligrams (mg)",
+      "Value": 1.7
+    },
+    "Folate": {
+      "Unit": "Micrograms DFE7 (mcg)",
+      "Value": 400
+    },
+    "Vitamin B12": {
+      "Unit": "Micrograms (mcg)",
+      "Value": 2.4
+    },
+    "Biotin": {
+      "Unit": "Micrograms (mcg)",
+      "Value": 30
+    },
+    "Pantothenic acid": {
+      "Unit": "Milligrams (mg)",
+      "Value": 5
+    },
+    "Phosphorus": {
+      "Unit": "Milligrams (mg)",
+      "Value": 1250
+    },
+    "Iodine": {
+      "Unit": "Micrograms (mcg)",
+      "Value": 150
+    },
+    "Magnesium": {
+      "Unit": "Milligrams (mg)",
+      "Value": 420
+    },
+    "Zinc": {
+      "Unit": "Milligrams (mg)",
+      "Value": 11
+    },
+    "Selenium": {
+      "Unit": "Micrograms (mcg)",
+      "Value": 55
+    },
+    "Copper": {
+      "Unit": "Milligrams (mg)",
+      "Value": 0.9
+    },
+    "Manganese": {
+      "Unit": "Milligrams (mg)",
+      "Value": 2.3
+    },
+    "Chromium": {
+      "Unit": "Micrograms (mcg)",
+      "Value": 35
+    },
+    "Molybdenum": {
+      "Unit": "Micrograms (mcg)",
+      "Value": 45
+    },
+    "Chloride": {
+      "Unit": "Milligrams (mg)",
+      "Value": 2300
+    },
+    "Potassium": {
+      "Unit": "Milligrams (mg)",
+      "Value": 4700
+    },
+    "Choline": {
+      "Unit": "Milligrams (mg)",
+      "Value": 550
+    }
+  }
+  
