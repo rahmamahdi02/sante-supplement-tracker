@@ -14,8 +14,8 @@ function Dashboard() {
 
     <Hero />
 <About />
-< MedicationTable /> 
-<Tracker />
+{/* < MedicationTable /> 
+<Tracker /> */}
 
      <Footer />
     </div>

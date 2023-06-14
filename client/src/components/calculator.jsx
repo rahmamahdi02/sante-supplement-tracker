@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Button, Header, Table, Container } from "semantic-ui-react";
 import Vitamincard from '../components/vitamincard';
 
@@ -7,35 +7,35 @@ const Calculator = () => {
   const [gender, setgender] = useState("");
   const [vitaminLevels, setVitaminLevels] = useState({});
   const [factsheetVitamin, setFactsheetVitamin] = useState(null);
-  const [selectedVitamin, setSelectedVitamin] = useState("");
+  const [tableValues, setTableValues] = useState(false);
+
+  const [selectedVitamin, setSelectedVitamin] = useState(""); // why isn't this being used, to show modal
 
   // need another instance of state for the selected vitamin for which the factsheet is being shown
 
+
+useEffect(() => {
+
+ fetch("/api/RDA")
+
+  .then(response => response.json())
+  .then(data => setVitaminLevels(data))
+  .catch(error => console.log("Error", error)); // semicolon to end statement
+
+}, []); // Want to have UseEffect only render once.. add a dependency array that is empty 1x //If you add any variables to dependency array the UseEffect will rerender anytime those variables change in compoenent
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (gender === "Female" && age >= 18 || gender === "Male" && age >= 18  || gender === "Non-binary" && age >= 18  ) {
-      setVitaminLevels({
-        "Vitamin A": "900 mcg",
-        "Vitamin C": "90 mg",
-        "Vitamin D": "20 ug",
-        "Vitamin E": "15 mcg",
-        "Vitamin K": "120 mcg" ,
-        "Vitamin B1": "1.2 mg" ,
-        "Vitamin B2": "1.3 mg",
-        "Vitamin B3" : "1.6 mg",
-        "Vitamin B6" : "400 mg" ,
-        "Vitamin B12" : "2.4 mcg" ,
-        "Pantothenic Acid" : "5 mg",
-        "Choline" : "550 mg",
-        "Biotin" : "30 mg",
-        "Folate" : "25 mg",
-
-      });
+    if (gender === "Female" && age >= 4 || gender === "Male" && age >= 4  || gender === "Non-binary" && age >= 4  ) {
+   setTableValues(true); // boolean that keeps track to show if conditions were met
+   
     } else {
       setVitaminLevels({});
     }
   };
+
+
 
 
   const showFactSheet = (vitamin) => {
@@ -45,6 +45,7 @@ const Calculator = () => {
       setFactsheetVitamin(vitamin);
     }
   };
+
 
 
 
@@ -71,16 +72,18 @@ const Calculator = () => {
 
             </select>
           </Form.Field>
+
           <Button type="submit">Calculate Vitamin Levels</Button>
         </Form>
-        {Object.keys(vitaminLevels).length !== 0 && (
+        { tableValues && (
           <div>
             <Header as="h2">Vitamin Levels:</Header>
             <Table celled>
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell>Vitamin</Table.HeaderCell>
-                  <Table.HeaderCell>Level (mg)</Table.HeaderCell>
+                  <Table.HeaderCell>Dosage</Table.HeaderCell>
+                  <Table.HeaderCell>Unit</Table.HeaderCell>
                   <Table.HeaderCell>FactSheet</Table.HeaderCell>
 
                 </Table.Row>
@@ -89,7 +92,9 @@ const Calculator = () => {
                 {Object.keys(vitaminLevels).map((vitamin) => (
                   <Table.Row key={vitamin}> 
                     <Table.Cell>{vitamin}</Table.Cell>
-                    <Table.Cell>{vitaminLevels[vitamin]}</Table.Cell>
+                    <Table.Cell>{vitaminLevels[vitamin].Value}</Table.Cell>
+                    <Table.Cell>{vitaminLevels[vitamin].Unit}</Table.Cell>
+
                     <Table.Cell>
 
     {selectedVitamin === vitamin ? (

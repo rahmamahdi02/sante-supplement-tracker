@@ -7,7 +7,7 @@ require("dotenv").config();
 const path = require("path");
 const db = require("./db/db-connection.js");
 const { response } = require("express");
-
+const MockVitamin = require("./MockVitamin.json");
 const { auth } = require("express-oauth2-jwt-bearer");
 
 //without --save will need to update package.json manually
@@ -54,6 +54,10 @@ app.post('/api/users', async (req, res) => {
   }
 });
 
+
+app.get("/api/RDA", async(req, res) => {
+   res.json(MockVitamin)
+  } )
 
 app.post("/api/factsheets", async (req, res) => {
 
